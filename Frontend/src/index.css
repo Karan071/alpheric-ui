@@ -1,0 +1,14 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-urbanist : "Urbanist","mono";
+    --font-Instrumental-serif : "Instrument-serif","mono";
+    --font-Instrumental-sans : "Instrument-sans";
+
+}
+
