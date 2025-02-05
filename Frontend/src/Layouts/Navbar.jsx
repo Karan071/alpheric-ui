@@ -57,11 +57,11 @@ export default Navbar;
 
 //     return (
 //         <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-2 bg-transparent backdrop-blur-md border border-white/10 z-50">
-//             <div>
-//                 <img src={Alphericlogo} alt="logo" className="w-44 h-18" />
+//             <div className='relative z-10'>
+//                 <img src={Alphericlogo} alt="logo" className="w-36 h-auto" />
 //             </div>
 
-//             <div className="flex gap-4 border border-white rounded-full px-4 py-2 text-md bg-white/10 backdrop-blur-lg">
+//             <div className="flex gap-4 border border-white rounded-full px-2 text-md bg-white/10 backdrop-blur-lg">
 //                 {navItems.map((item) => (
 //                     <a 
 //                         key={item.id}
@@ -79,6 +79,9 @@ export default Navbar;
 //             </div>
 
 //             <button className="px-6 py-3 rounded-full border border-white bg-white hover:bg-cyan-200 hover:text-black transition">
+//                 Sign Up
+//             </button>
+//             <button className="px-6 py-1 rounded-full border border-white bg-white hover:bg-cyan-200 hover:text-black transition">
 //                 Sign Up
 //             </button>
 //         </div>

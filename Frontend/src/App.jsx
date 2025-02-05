@@ -4,6 +4,7 @@ import HomePage from './Pages/HomePage'
 import Navbar from './Layouts/Navbar'
 import Design from './Pages/Design'
 import Questionaire from './Pages/Questionaire'
+import Hire from "./Pages/Hire"
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
         <HomePage />
         <Design/>
         <Questionaire/>
+        <Hire/>
       </div>
     </>
   )
