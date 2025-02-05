@@ -73,14 +73,14 @@ const HomePage = () => {
 
 
                             {/* Chat Card */}
-                            {/* <div className="absolute bottom-8 right-8 bg-slate-900 text-white p-4 rounded-lg w-64">
+                            <div className="absolute bottom-8 right-8 bg-slate-900 text-white p-4 rounded-lg w-64">
                                 <button className="w-full bg-white text-black rounded-full py-2 mb-2 text-sm">
                                     Play Reel
                                 </button>
                                 <button className="w-full border border-white rounded-full py-2 text-sm">
                                     Let's Talk 👋
                                 </button>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>

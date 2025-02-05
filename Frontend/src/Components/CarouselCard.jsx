@@ -1,31 +1,32 @@
 import React from 'react';
-import { MoveUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
-function CarouselCard({ imageUrl, title }) {
+const CarouselCard = ({ title, imageUrl, description, visitLink }) => {
     return (
-        <article className="relative pb-4 overflow-hidden">
-            <div className="w-full rounded-md h-full overflow-hidden">
-                <img
-                    src={imageUrl}
-                    alt={title}
-                    className="h-full w-full object-cover rounded-xl hover:scale-100 scale-105 transition-all duration-300"
-                />
+        <div className="relative w-70 h-100 mx-1 rounded-xl overflow-hidden shadow-lg group ">
+            <img
+                src={imageUrl}
+                alt={title}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-4 flex flex-col justify-between">
+                <div>
+                    <h3 className="text-white text-2xl font-semibold">{title}</h3>
+                    <p className="text-white font-medium text-md">{description}</p>
+                </div>
+                <div className="flex justify-end">
+                    <a
+                        href={visitLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-stone-400 text-white gap-2 p-2 rounded-full text-sm font-medium flex items-center hover:bg-gray-50"
+                    >
+                        <ArrowUpRight size={25} />
+                    </a>
+                </div>
             </div>
-            <div className="absolute bottom-2 text-black w-full p-4 flex justify-between items-center">
-                <h3 className="sm:text-xl text-sm bg-black text-white rounded-xl p-2 px-4">
-                    {title}
-                </h3>
-                <button className="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-[#080918] font-medium text-neutral-200 border-2 transition-all duration-300 hover:w-24">
-                    <div className="inline-flex whitespace-nowrap opacity-0 transition-all duration-200 group-hover:-translate-x-3 group-hover:opacity-100">
-                        Visit
-                    </div>
-                    <div className="absolute right-3">
-                        <MoveUpRight />
-                    </div>
-                </button>
-            </div>
-        </article>
+        </div>
     );
-}
+};
 
 export default CarouselCard;
