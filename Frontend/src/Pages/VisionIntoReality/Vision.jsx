@@ -2,10 +2,14 @@ import React from 'react'
 import visionGif from "../../assets/vision.gif";
 const Vision = () => {
     return (
-        <div className='h-screen flex justify-center items-center'>
+        <section className='h-screen flex justify-center items-center font-Instrumental-sans'>
             <img src={visionGif} alt="gif" />
-        </div>
-    )
+            <div className='absolute flex-1 flex-row text-7xl justify-center items-center font-bold text-outline'>
+                <div>Let's turn your vision into reality,</div> 
+                <div className='flex justify-center'>One step at a time.</div>
+            </div>
+        </section>
+    )  
 }
 
 export default Vision

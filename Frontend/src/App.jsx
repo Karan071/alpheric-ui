@@ -8,6 +8,8 @@ import Hire from "./Pages/Hire"
 import Contact from './Pages/Contact'
 import Footer from './Pages/Footer'
 import Vision from './Pages/VisionIntoReality/Vision'
+import Pilot from './Pages/VisionIntoReality/Pilot'
+import Next from './Pages/VisionIntoReality/Next'
 function App() {
 
   return (
@@ -19,6 +21,8 @@ function App() {
         <Questionaire/>
         <Hire/>
         <Vision/>
+        <Pilot/>
+        <Next/>
         <Contact/>
         <Footer/>
       </div>
