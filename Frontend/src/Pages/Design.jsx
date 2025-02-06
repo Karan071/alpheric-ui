@@ -17,7 +17,8 @@ const Design = () => {
                     <video 
                     className='w-screen rounded-2xl h-auto '
                     ref={videoRef}
-                    src={sampleVideo}
+                    // src={sampleVideo}
+                    src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
                     poster={videsectionImage}
                     >
                     </video>

@@ -98,7 +98,8 @@ const HomePage = () => {
                                 <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-md w-70 z-55">
                                     <div className="relative">
                                         <video
-                                            src={sample}
+                                            // src={sample}
+                                            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
                                             className="w-full object-cover rounded-xl"
                                             ref={videoRef}
                                             id="videoPlayer"
@@ -136,7 +137,9 @@ const HomePage = () => {
                                                 }
                                             }}
                                         >
-                                            <img className="w-20" src={playButton} alt="Play Button" />
+                                            <img className="w-20"
+                                            src={playButton}
+                                            alt="Play Button" />
                                         </button>
 
                                         <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-35 h-10 border bg-white text-black font-medium rounded-full py-2 text-md hover:bg-slate-500 transition">
