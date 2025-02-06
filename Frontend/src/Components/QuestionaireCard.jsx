@@ -89,7 +89,7 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                         </div>
                     </>
                 ) : (
-                    <div className="text-center">
+                    <div className="text-center pb-14">
                         <div className="inline-block px-4 py-1 rounded-full bg-white border text-gray-600 mb-8 font-semibold text-lg">
                             Insights
                         </div>
@@ -101,7 +101,7 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                         </p>
                         <button
                             onClick={() => onAnswer("view")}
-                            className="bg-black text-white p-4 rounded-full hover:bg-[#56c8dc] transition-colors absolute left-1/2 -bottom-5 -translate-x-1/2"
+                            className="bg-black text-white text-2xl px-9 py-11 rounded-full hover:bg-[#56c8dc] transition-colors absolute -bottom-10 -translate-x-1/2"
                         >
                             View
                         </button>
