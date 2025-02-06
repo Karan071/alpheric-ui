@@ -5,6 +5,7 @@ import sample from "../assets/Videos/sample.mp4"
 import { useRef, useState, useEffect } from "react"
 import { X, VolumeOff, Volume2} from "lucide-react"
 import playButton from "../assets/Videos/play.png"
+import reelPoster from "../assets/reelPoster.png"
 
 
 const HomePage = () => {
@@ -94,13 +95,14 @@ const HomePage = () => {
 
                             
                             {isShowingPanel && (
-                                <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-lg w-70 z-50">
+                                <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-md w-70 z-55">
                                     <div className="relative">
                                         <video
                                             src={sample}
-                                            className="w-full object-cover rounded-2xl"
+                                            className="w-full object-cover rounded-xl"
                                             ref={videoRef}
                                             id="videoPlayer"
+                                            poster={reelPoster}
                                         />
                                         <button
                                             onClick={() => setIsShowingPanel(false)}
@@ -137,7 +139,7 @@ const HomePage = () => {
                                             <img className="w-20" src={playButton} alt="Play Button" />
                                         </button>
 
-                                        <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-40 border bg-white text-black font-medium rounded-full py-2 text-sm hover:bg-white/10 transition">
+                                        <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-35 h-10 border bg-white text-black font-medium rounded-full py-2 text-md hover:bg-slate-500 transition">
                                             Let's Talk 👋
                                         </button>
                                     </div>

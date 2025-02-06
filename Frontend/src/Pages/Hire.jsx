@@ -5,12 +5,13 @@ import card2 from "../assets/Carousel/asset2.jpeg"
 import card3 from "../assets/Carousel/asset3.jpeg"
 import card4 from "../assets/Carousel/asset4.jpeg"
 import card5 from "../assets/Carousel/asset5.jpeg"
+import { useRef } from "react";
 
 const Hire = () => {
     const [isDragging, setIsDragging] = React.useState(false);
     const [startX, setStartX] = React.useState(0);
     const [scrollLeft, setScrollLeft] = React.useState(0);
-    const sliderRef = React.useRef(null);
+    const sliderRef = useRef(null);
 
     const handleMouseDown = (e) => {
         setIsDragging(true);
@@ -32,8 +33,8 @@ const Hire = () => {
 
     return (
         <section className="min-h-screen flex flex-col items-center justify-evenly px-14 py-10">
-            <h1 className="font-Instrumental-serif  text-8xl w-full">Hire</h1>
-            <div className="w-full">
+            <h1 className="font-Instrumental-serif text-8xl p-4 m-18 w-full">Hire</h1>
+            <div className="w-full ">
                 <div 
                     className="relative overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing"
                     ref={sliderRef}
@@ -42,7 +43,7 @@ const Hire = () => {
                     onMouseLeave={handleMouseUp}
                     onMouseMove={handleMouseMove}
                 >
-                    <div className="flex gap-4 px-4 py-4 w-max scroll-smooth snap-x snap-mandatory">
+                    <div className="flex gap-2 px-4 py-20 w-max scroll-smooth snap-x snap-mandatory">
                         <CarouselCard
                             imageUrl={card1}
                             title="Technology"
@@ -90,7 +91,24 @@ const Hire = () => {
                             title="Marketer"
                             description="Stay ahead with the latest in tech trends."
                             visitLink="https://example.com"
-                        />
+                        /><CarouselCard
+                        imageUrl={card3}
+                        title="Developer"
+                        description="Stay ahead with the latest in tech trends."
+                        visitLink="https://example.com"
+                    />
+                    <CarouselCard
+                        imageUrl={card4}
+                        title="Designer"
+                        description="Stay ahead with the latest in tech trends."
+                        visitLink="https://example.com"
+                    />
+                    <CarouselCard
+                        imageUrl={card5}
+                        title="Marketer"
+                        description="Stay ahead with the latest in tech trends."
+                        visitLink="https://example.com"
+                    />
                     </div>
                 </div>
             </div>

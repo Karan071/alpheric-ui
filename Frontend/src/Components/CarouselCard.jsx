@@ -19,7 +19,7 @@ const CarouselCard = ({ title, imageUrl, description, visitLink }) => {
                         href={visitLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-stone-400 text-white gap-2 p-2 rounded-full text-sm font-medium flex items-center hover:bg-gray-50"
+                        className="bg-stone-400 text-white gap-2 p-2 rounded-full text-sm font-medium flex items-center hover:bg-black "
                     >
                         <ArrowUpRight size={25} />
                     </a>

@@ -7,6 +7,7 @@ import Questionaire from './Pages/Questionaire'
 import Hire from "./Pages/Hire"
 import Contact from './Pages/Contact'
 import Footer from './Pages/Footer'
+import Vision from './Pages/VisionIntoReality/Vision'
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
         <Design/>
         <Questionaire/>
         <Hire/>
+        <Vision/>
         <Contact/>
         <Footer/>
       </div>
