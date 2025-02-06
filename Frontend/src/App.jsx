@@ -6,6 +6,7 @@ import Design from './Pages/Design'
 import Questionaire from './Pages/Questionaire'
 import Hire from "./Pages/Hire"
 import Contact from './Pages/Contact'
+import Footer from './Pages/Footer'
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
         <Questionaire/>
         <Hire/>
         <Contact/>
+        <Footer/>
       </div>
     </>
   )

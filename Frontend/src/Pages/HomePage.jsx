@@ -1,8 +1,30 @@
 import Spiral from "../assets/spiral.png"
 import asset from "../assets/asset.png"
 import alpheric_logo from "../assets/alpheric-a1.jpeg"
+import sample from "../assets/Videos/sample.mp4"
+import { useRef, useState, useEffect } from "react"
+import { X, VolumeOff, Volume2} from "lucide-react"
+import playButton from "../assets/Videos/play.png"
+
 
 const HomePage = () => {
+    const videoRef = useRef(null);
+    const [isShowingPanel, setIsShowingPanel] = useState(true);
+    const [isMuted, setIsMuted] = useState(true);
+
+    // useEffect(() => {
+    //     if (videoRef.current) {
+    //         videoRef.current.muted = true;
+    //     }
+    // }, []);
+
+    // const handleVolumeToggle = () => {
+    //     if (videoRef.current) {
+    //         videoRef.current.muted = !videoRef.current.muted;
+    //         setIsMuted(!isMuted);
+    //     }
+    // };
+
     return (
         <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#F5F0FF]">
             <div className="container mx-auto px-6 h-screen flex items-center">
@@ -70,17 +92,58 @@ const HomePage = () => {
                                 <img src={Spiral} />
                             </div>
 
+                            
+                            {isShowingPanel && (
+                                <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-lg w-70 z-50">
+                                    <div className="relative">
+                                        <video
+                                            src={sample}
+                                            className="w-full object-cover rounded-2xl"
+                                            ref={videoRef}
+                                            id="videoPlayer"
+                                        />
+                                        <button
+                                            onClick={() => setIsShowingPanel(false)}
+                                            className="absolute top-4 right-4 bg-white p-2 rounded-md text-black z-10"
+                                        >
+                                            <X />
+                                        </button>
 
+                                        {
+                                        /* <button
+                                            onClick={handleVolumeToggle}
+                                            className="absolute top-4 left-4 bg-white p-1.5 rounded-3xl text-black z-10"
+                                        >
+                                            <VolumeOff />
+                                        </button>
+                                        
+                                        <button
+                                            className="absolute top-4 left-4 bg-white p-1.5 rounded-3xl text-black z-10"
+                                        >
+                                            <Volume2 />
+                                        </button> */
+                                        }
 
-                            {/* Chat Card */}
-                            <div className="absolute bottom-8 right-8 bg-slate-900 text-white p-4 rounded-lg w-64">
-                                <button className="w-full bg-white text-black rounded-full py-2 mb-2 text-sm">
-                                    Play Reel
-                                </button>
-                                <button className="w-full border border-white rounded-full py-2 text-sm">
-                                    Let's Talk 👋
-                                </button>
-                            </div>
+                                        <button
+                                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:bg-white/10 rounded-full p-4"
+                                            onClick={() => {
+                                                if (videoRef.current.paused) {
+                                                    videoRef.current.play();
+                                                } else {
+                                                    videoRef.current.pause();
+                                                }
+                                            }}
+                                        >
+                                            <img className="w-20" src={playButton} alt="Play Button" />
+                                        </button>
+
+                                        <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-40 border bg-white text-black font-medium rounded-full py-2 text-sm hover:bg-white/10 transition">
+                                            Let's Talk 👋
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+
                         </div>
                     </div>
                 </div>

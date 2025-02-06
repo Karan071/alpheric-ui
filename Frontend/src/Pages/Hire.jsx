@@ -7,12 +7,42 @@ import card4 from "../assets/Carousel/asset4.jpeg"
 import card5 from "../assets/Carousel/asset5.jpeg"
 
 const Hire = () => {
+    const [isDragging, setIsDragging] = React.useState(false);
+    const [startX, setStartX] = React.useState(0);
+    const [scrollLeft, setScrollLeft] = React.useState(0);
+    const sliderRef = React.useRef(null);
+
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - sliderRef.current.offsetLeft);
+        setScrollLeft(sliderRef.current.scrollLeft);
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - sliderRef.current.offsetLeft;
+        const walk = (x - startX) * 2;
+        sliderRef.current.scrollLeft = scrollLeft - walk;
+    };
+
     return (
-        <section className="px-14 mt-10">
-            <h1 className="font-Instrumental-sans text-5xl mb-6">Hire</h1>
-            <div className='min-h-screen w-full px-15 flex items-center justify-start'>
-                <div className="relative overflow-x-auto scrollbar-hide">
-                    <div className="flex gap-2 px-4 py-4 w-max scroll-smooth snap-x snap-mandatory">
+        <section className="min-h-screen flex flex-col items-center justify-evenly px-14 py-10">
+            <h1 className="font-Instrumental-serif  text-8xl w-full">Hire</h1>
+            <div className="w-full">
+                <div 
+                    className="relative overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing"
+                    ref={sliderRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseUp={handleMouseUp}
+                    onMouseLeave={handleMouseUp}
+                    onMouseMove={handleMouseMove}
+                >
+                    <div className="flex gap-4 px-4 py-4 w-max scroll-smooth snap-x snap-mandatory">
                         <CarouselCard
                             imageUrl={card1}
                             title="Technology"
@@ -61,7 +91,6 @@ const Hire = () => {
                             description="Stay ahead with the latest in tech trends."
                             visitLink="https://example.com"
                         />
-
                     </div>
                 </div>
             </div>
