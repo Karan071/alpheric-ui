@@ -1,168 +1,115 @@
-// import { ReactLenis } from 'lenis/react';
-// import { useTransform, motion, useScroll } from 'framer-motion';
-// import { useRef } from 'react';
-// import Image from 'next/image';
-// const projects = [
-//     {
-//         title: 'Matthias Leidinger',
-//         description:
-//             'Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.',
-//         src: 'rock.jpg',
-//         link: 'https://images.unsplash.com/photo-1605106702842-01a887a31122?q=80&w=500&auto=format&fit=crop',
-//         color: '#5196fd',
-//     },
-//     {
-//         title: 'Clément Chapillon',
-//         description:
-//             'This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément.',
-//         src: 'tree.jpg',
-//         link: 'https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?w=500&auto=format&fit=crop&q=60',
-//         color: '#8f89ff',
-//     },
-//     {
-//         title: 'Zissou',
-//         description:
-//             'Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal.',
-//         src: 'water.jpg',
-//         link: 'https://images.unsplash.com/photo-1605106901227-991bd663255c?w=500&auto=format&fit=crop',
-//         color: '#13006c',
-//     },
-//     {
-//         title: 'Mathias Svold and Ulrik Hasemann',
-//         description:
-//             'The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.',
-//         src: 'house.jpg',
-//         link: 'https://images.unsplash.com/photo-1605106715994-18d3fecffb98?w=500&auto=format&fit=crop&q=60',
-//         color: '#ed649e',
-//     },
-//     {
-//         title: 'Mark Rammers',
-//         description:
-//             'Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote.',
-//         src: 'cactus.jpg',
-//         link: 'https://images.unsplash.com/photo-1506792006437-256b665541e2?w=500&auto=format&fit=crop',
-//         color: '#fd521a',
-//     },
-// ];
-// export default function index() {
-//     const container = useRef(null);
-//     const { scrollYProgress } = useScroll({
-//         target: container,
-//         offset: ['start start', 'end end'],
-//     });
+// import React from 'react'
+
+// const QuestionaireCard = () => {
 //     return (
-//         <ReactLenis root>
-//             <main className="bg-black" ref={container}>
-//                 <>
-//                     <section className="text-white  h-[70vh]  w-full bg-slate-950  grid place-content-center ">
-//                         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+//         <div className='relative bg-white w-[500px] p-8 rounded-2xl shadow-sm overflow-hidden m-20'>
+//             <div className='flex items-center justify-center gap-4 mb-8'>
+//                 <div className='w-7 h-7 rounded-full border-2 border-black flex items-center justify-center font-medium'>1</div>
+//                 <div className='text-gray-300 font-medium'>2</div>
+//                 <div className='text-gray-300 font-medium'>3</div>
+//             </div>
 
-//                         <h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
-//                             Stacking Cards Using <br /> Framer-Motion. Scroll down! 👇
-//                         </h1>
-//                     </section>
-//                 </>
+//             <h2 className='text-center text-2xl font-medium mb-12 px-4'>
+//                 Are you taking advantage of cloud computing to reduce infrastructure costs and increase agility?
+//             </h2>
 
-//                 <section className="text-white   w-full bg-slate-950  ">
-//                     {projects.map((project, i) => {
-//                         const targetScale = 1 - (projects.length - i) * 0.05;
-//                         return (
-//                             <Card
-//                                 key={`p_${i}`}
-//                                 i={i}
-//                                 url={project?.link}
-//                                 src={project?.src}
-//                                 title={project?.title}
-//                                 color={project?.color}
-//                                 description={project?.description}
-//                                 progress={scrollYProgress}
-//                                 range={[i * 0.25, 1]}
-//                                 targetScale={targetScale}
-//                             />
-//                         );
-//                     })}
-//                 </section>
-
-//                 <footer className="group bg-slate-950 ">
-//                     <h1 className="text-[16vw]  translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
-//                         ui-layout
-//                     </h1>
-//                     <div className="bg-black h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full"></div>
-//                 </footer>
-//             </main>
-//         </ReactLenis>
-//     );
-// }
-// export const Card = ({
-//     i,
-//     title,
-//     description,
-//     src,
-//     url,
-//     color,
-//     progress,
-//     range,
-//     targetScale,
-// }) => {
-//     const container = useRef(null);
-//     const { scrollYProgress } = useScroll({
-//         target: container,
-//         offset: ['start end', 'start start'],
-//     });
-//     const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
-//     const scale = useTransform(progress, range, [1, targetScale]);
-//     return (
-//         <div
-//             ref={container}
-//             className="h-screen flex items-center justify-center sticky top-0"
-//         >
-//             <motion.div
-//                 style={{
-//                     backgroundColor: color,
-//                     scale,
-//                     top: `calc(-5vh + ${i * 25}px)`,
-//                 }}
-//                 className={`flex flex-col relative -top-[25%] h-[450px] w-[70%] rounded-md p-10 origin-top`}
-//             >
-//                 <h2 className="text-2xl text-center font-semibold">{title}</h2>
-//                 <div className={`flex h-full mt-5 gap-10`}>
-//                     <div className={`w-[40%] relative top-[10%]`}>
-//                         <p className="text-sm">{description}</p>
-//                         <span className="flex items-center gap-2 pt-2">
-//                             <a
-//                                 href={'#'}
-//                                 target="_blank"
-//                                 className="underline cursor-pointer"
-//                             >
-//                                 See more
-//                             </a>
-//                             <svg
-//                                 width="22"
-//                                 height="12"
-//                                 viewBox="0 0 22 12"
-//                                 fill="none"
-//                                 xmlns="http://www.w3.org/2000/svg"
-//                             >
-//                                 <path
-//                                     d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z"
-//                                     fill="black"
-//                                 />
-//                             </svg>
-//                         </span>
-//                     </div>
-
-//                     <div
-//                         className={`relative w-[60%] h-full rounded-lg overflow-hidden `}
-//                     >
-//                         <motion.div
-//                             className={`w-full h-full`}
-//                             style={{ scale: imageScale }}
-//                         >
-//                             <Image fill src={url} alt="image" className="object-cover" />
-//                         </motion.div>
-//                     </div>
-//                 </div>
-//             </motion.div>
+//             {/* Buttons */}
+//             <button className='absolute -left-2 -bottom-5 bg-black text-white p-8 text-2xl rounded-full font-medium'>
+//                 No
+//             </button>
+//             <button className='absolute -right-3 -bottom-5 bg-black text-white p-8 text-2xl rounded-full font-medium'>
+//                 Yes
+//             </button>
 //         </div>
-//     );
-// };
+//     )
+// }
+
+// export default QuestionaireCard
+
+
+
+import React from "react";
+import { motion } from "framer-motion";
+
+const slideVariants = {
+    enter: {
+        y: 100,
+        opacity: 0,
+    },
+    center: {
+        y: 0,
+        opacity: 1,
+    },
+    exit: {
+        y: -100,
+        opacity: 0,
+    },
+};
+
+const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
+    return (
+        <motion.div
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ y: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.2 } }}
+            className="relative w-full max-w-[700px]"
+        >
+            <div className="relative bg-white w-full p-8 rounded-3xl shadow-2xl overflow-hidden">
+                {question.type !== "special" ? (
+                    <>
+                        <div className="flex items-center justify-center gap-4 mb-8">
+                            {Array.from({ length: totalSteps }, (_, index) => (
+                                <div
+                                    key={index + 1}
+                                    className={`w-7 h-7 rounded-full border-2 flex items-center justify-center font-medium
+                                        ${index + 1 === stepNumber ? "border-black" : "border-gray-300 text-gray-300"}`}
+                                >
+                                    {index + 1}
+                                </div>
+                            ))}
+                        </div>
+                        <h2 className="text-center text-2xl font-medium mb-12 px-4">
+                            {question.text}
+                        </h2>
+                        <div className="flex justify-between">
+                            <button
+                                onClick={() => onAnswer("no")}
+                                className="absolute -left-2 -bottom-5 bg-black text-white p-8 text-2xl rounded-full font-medium hover:bg-[#56c8dc]"
+                            >
+                                No
+                            </button>
+                            <button
+                                onClick={() => onAnswer("yes")}
+                                className="absolute -right-3 -bottom-5 bg-black text-white p-8 text-2xl rounded-full font-medium hover:bg-[#56c8dc]"
+                            >
+                                Yes
+                            </button>
+                        </div>
+                    </>
+                ) : (
+                    <div className="text-center">
+                        <div className="inline-block px-4 py-1 rounded-full bg-white border text-gray-600 mb-8 font-semibold text-lg">
+                            Insights
+                        </div>
+                        <h2 className="text-4xl font-bold mb-4 px-4">
+                            {question.text}
+                        </h2>
+                        <p className="text-4xl font-bold mb-4 px-4">
+                            {question.subText}
+                        </p>
+                        <button
+                            onClick={() => onAnswer("view")}
+                            className="bg-black text-white p-4 rounded-full hover:bg-[#56c8dc] transition-colors absolute left-1/2 -bottom-5 -translate-x-1/2"
+                        >
+                            View
+                        </button>
+                    </div>
+                )}
+            </div>
+        </motion.div>
+    );
+};
+
+export default QuestionnaireCard;

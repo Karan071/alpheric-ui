@@ -6,6 +6,10 @@ import { useRef, useState, useEffect } from "react"
 import { X, VolumeOff, Volume2} from "lucide-react"
 import playButton from "../assets/Videos/play.png"
 import reelPoster from "../assets/reelPoster.png"
+import asset_1 from "../assets/Homeicons/asset-1.png"
+import asset_2 from "../assets/Homeicons/asset-2.png"
+import asset_3 from "../assets/Homeicons/asset-3.png"
+import asset_4 from "../assets/Homeicons/asset-4.png"
 
 
 const HomePage = () => {
@@ -28,7 +32,7 @@ const HomePage = () => {
 
     return (
         <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#F5F0FF]">
-            <div className="container mx-auto px-6 h-screen flex items-center">
+            <div className="container mx-auto my-5 px-2 h-screen flex items-center">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     {/* Left Section */}
                     <div className="md:w-1/2 h-full flex flex-col justify-center">
@@ -45,10 +49,10 @@ const HomePage = () => {
                             <div className="flex gap-6 font-urbanist">
                                 <p className="text-md text-gray-600">You'll Be Talking With Our Creative Talents:</p>
                                 <div className="flex -space-x-3">
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"></div>
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"></div>
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"></div>
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"></div>
+                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_1}/></div>
+                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_2}/></div>
+                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_3}/></div>
+                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_4}/></div>
                                 </div>
                                 <p className="text-md text-gray-600 max-w-md">
                                     Let's Craft A Digital Strategy Powered By

@@ -1,5 +1,4 @@
 import React from 'react'
-import sampleVideo from "../assets/Videos/sample-video.mp4"
 import videsectionImage from "../assets/design-asset-cropped.png"
 import { useRef } from 'react'
 import { MoveRight } from 'lucide-react'
@@ -10,8 +9,8 @@ const Design = () => {
     return (
         <section id="about">
             <div className='max-w-full flex flex-col px-18 mt-10'>
-                <p className='text-6xl font-Instrumental-serif mb-4'>We do amazing things</p>
-                <div className='flex items-center justify-start gap-4 font-Instrumental-serif text-4xl italic mb-10'>
+                <p className='text-6xl font-[Instrument-serif] italic  mb-4'>We do amazing things</p>
+                <div className='flex items-center justify-start gap-4 font-Instrumental-serif italic text-5xl mb-10'>
                     <MoveRight size={60} /> oh, with amazing people too</div>
                 <div className='relative'>
                     <video 
