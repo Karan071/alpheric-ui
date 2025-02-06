@@ -98,8 +98,8 @@ const HomePage = () => {
                                 <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-md w-70 z-55">
                                     <div className="relative">
                                         <video
-                                            // src={sample}
-                                            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
+                                            src={sample}
+                                            // src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
                                             className="w-full object-cover rounded-xl"
                                             ref={videoRef}
                                             id="videoPlayer"
