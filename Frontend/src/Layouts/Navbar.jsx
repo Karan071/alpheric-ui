@@ -10,7 +10,7 @@ const Navbar = () => {
                 <img src={Alphericlogo} alt="logo" className='w-36 h-auto ' />
             </div>
 
-            <div className="flex gap-6 border border-white rounded-full px-4 py-2 text-md bg-white/10 backdrop-blur-lg mx-5 ">
+            <div className="flex gap-6 border border-white rounded-full px-4 py-2 text-lg bg-white/10 backdrop-blur-lg mx-5">
                 <a href="#"  onClick={() => setActiveNav()}>Consult</a>
                 <a href="#about" onClick={() => setActiveNav()}>Build</a>
                 <a href="#design" onClick={() => setActiveNav()}>Design</a>
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <a href="#action" onClick={() => setActiveNav()}>Action</a>
                 <a href="#insights" onClick={() => setActiveNav()}>Insights</a>
             </div>
-            <button className="px-4 py-2 rounded-3xl border border-black bg-white">
+            <button className="px-4 py-2 text-xl rounded-3xl border border-black hover:bg-[#56c8dc] hover:text-white bg-white">
                 Sign Up
             </button>
         </div>

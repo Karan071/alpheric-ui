@@ -42,22 +42,22 @@ const HomePage = () => {
 
 
                         <div className="space-y-8 mt-14">
-                            <button className="px-8 py-3 rounded-full border border-black text-sm hover:bg-white hover:text-black">
+                            <button className="px-8 py-3 rounded-full border border-black text-lg hover:bg-[#56c8dc] hover:text-white">
                                 Let's Talk
                             </button>
 
                             <div className="flex gap-6 font-urbanist">
-                                <p className="text-md text-gray-600">You'll Be Talking With Our Creative Talents:</p>
+                                <p className="text-lg text-gray-600">You'll Be Talking With Our Creative Talents:</p>
                                 <div className="flex -space-x-3">
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_1}/></div>
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_2}/></div>
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_3}/></div>
-                                    <div className="w-8 h-8  border-2 border-white bg-gray-200"><img src={asset_4}/></div>
+                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1}/></div>
+                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_2}/></div>
+                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_3}/></div>
+                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_4}/></div>
                                 </div>
-                                <p className="text-md text-gray-600 max-w-md">
+                                <p className="text-lg text-gray-600 max-w-md">
                                     Let's Craft A Digital Strategy Powered By
                                     Award-Winning Tech To Drive Real Results And
-                                    Grow Your Business—Together!  🚀
+                                    Grow Your Business — Together!  🚀
                                 </p>
                             </div>
 
@@ -74,7 +74,7 @@ const HomePage = () => {
                                         <img src={alpheric_logo} alt="alpheric-logo" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
-                                <svg className="animate-spin-slow absolute inset-0" viewBox="0 0 100 100">
+                                <svg className="animate-spin-slow absolute inset-1" viewBox="0 0 100 100">
                                     <defs>
                                         <path
                                             id="circlePath"
@@ -83,8 +83,19 @@ const HomePage = () => {
                                         />
                                     </defs>
                                     <text>
-                                        <textPath href="#circlePath" fontSize="8" startOffset="0">
+                                        <textPath 
+                                            href="#circlePath" 
+                                            fontSize="9" 
+                                            startOffset="1"
+                                        >
                                             • FOLLOW OUR DIGITAL JOURNEY • FOLLOW OUR DIGITAL JOURNEY
+                                            <animate
+                                                attributeName="startOffset"
+                                                from="0"
+                                                to="100"
+                                                dur="10s"
+                                                repeatCount="indefinite"
+                                            />
                                         </textPath>
                                     </text>
                                 </svg>

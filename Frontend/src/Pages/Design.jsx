@@ -4,21 +4,24 @@ import { useRef } from 'react'
 import { MoveRight } from 'lucide-react'
 import playButton from "../assets/Videos/play.png"
 
+
 const Design = () => {
     const videoRef = useRef(null);
     return (
         <section id="about">
-            <div className='max-w-full flex flex-col px-18 mt-10'>
+            <div
+                className='max-w-full flex flex-col px-18 mt-10'>
                 <p className='text-6xl font-[Instrument-serif] italic  mb-4'>We do amazing things</p>
                 <div className='flex items-center justify-start gap-4 font-Instrumental-serif italic text-5xl mb-10'>
                     <MoveRight size={60} /> oh, with amazing people too</div>
-                <div className='relative'>
-                    <video 
-                    className='w-screen rounded-2xl h-auto '
-                    ref={videoRef}
-                    // src={sampleVideo}
-                    src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
-                    poster={videsectionImage}
+                <div
+                className='relative'>
+                    <video
+                        className='w-screen rounded-2xl h-auto '
+                        ref={videoRef}
+                        // src={sampleVideo}
+                        src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+                        poster={videsectionImage}
                     >
                     </video>
                     <button
