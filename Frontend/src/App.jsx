@@ -11,23 +11,25 @@ import Next from './Pages/VisionIntoReality/Next'
 import CustomerPage from "./Pages/CustomerPage"
 import Pilotpage from './Pages/Pilot/PilotPage'
 import SolutionPage from './Pages/Solutions/SolutionPage'
-function App() {
+import BriefPage from './Pages/Brief/BriefPage'
 
+function App() {
   return (
     <>
       <Navbar />
       <div>
         <HomePage />
-        <Design/>
-        <Questionaire/>
-        <Vision/>
-        <Pilotpage/>
-        <Next/>
-        <CustomerPage/>
-        <SolutionPage/>
-        <Hire/>
-        <Contact/>
-        <Footer/>
+        <Design />
+        <Questionaire />
+        <CustomerPage />
+        <SolutionPage />
+        <Pilotpage />
+        <Vision />
+        <Next />
+        <BriefPage/>
+        <Hire />
+        <Contact />
+        <Footer />
       </div>
     </>
   )

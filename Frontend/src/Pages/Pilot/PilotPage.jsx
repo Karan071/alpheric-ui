@@ -7,8 +7,7 @@ import pilot4 from '../../assets/Pilot_assets/pilot_asset_4.png'
 const Pilotpage = () => {
     return (
         <div className="space-y-16">
-            {/* First Pilot Section */}
-            <h1 className='font-Instrumental-sans text-9xl px-15'>Book a Pilot</h1>
+            <h1 className='h-screen flex justify-center items-center font-instrument-sans font-semibold text-[140px] px-15'>Book a Pilot</h1>
 
             <PilotSection
                 title="Pilot for You"
@@ -16,7 +15,7 @@ const Pilotpage = () => {
                 duration="2 weeks"
                 buttonText="Book a pilot"
                 onButtonClick={() => console.log('First Pilot button clicked')}
-                imageSrc={pilot1} // Using the first image
+                imageSrc={pilot1} 
             />
 
             <PilotSection
@@ -25,11 +24,9 @@ const Pilotpage = () => {
                 duration="4 weeks"
                 buttonText="Book a pilot"
                 onButtonClick={() => console.log('First Pilot button clicked')}
-                imageSrc={pilot2} // Using the first image
+                imageSrc={pilot2} 
             />
 
-
-            {/* Third Pilot Section with another image */}
             <PilotSection
                 title="Pilot For SMBs"
                 subtitle="Transform your tech ideas into market success. Boost conversions, attract investment."

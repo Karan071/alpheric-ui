@@ -1,12 +1,11 @@
 import React from "react";
 
-const SolutionTag = ({ label, onClick, className }) => {
+const SolutionTag = ({tagName}) => {
     return (
         <button
-            className={`px-3 py-2 m-2 border rounded-[70px] ${className}`}
-            onClick={onClick}
+            className={`font-urbanist px-3 py-1 m-2 border rounded-[70px]`}
         >
-            {label}
+            {tagName}
         </button>
     );
 };

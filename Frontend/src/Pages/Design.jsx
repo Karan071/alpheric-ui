@@ -11,8 +11,8 @@ const Design = () => {
         <section id="about">
             <div
                 className='max-w-full flex flex-col px-18 mt-10'>
-                <p className='text-6xl font-[var(--font-Instrument-sans)] italic mb-4'>We do amazing things</p>
-                <div className='flex items-center justify-start gap-4 font-Instrumental-serif italic text-5xl mb-10'>
+                <p className='text-[84px] font-instrument-sans font-[600] mb-4'>We do amazing things</p>
+                <div className='flex items-center justify-start gap-4 font-instrumental-serif italic text-[84px] mb-10'>
                     <MoveRight size={60} /> oh, with amazing people too</div>
                 <div
                 className='relative'>

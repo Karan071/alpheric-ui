@@ -5,9 +5,9 @@ import calender from "../../assets/Pilot_assets/calendar.svg"
 const Pilot = () => {
     return (
         <>
-            <section className='h-screen flex justify-center items-center'>
-                <h1 className='font-Instrumental-sans text-9xl'>Book a Pilot</h1>
-            </section>
+            <div className='h-screen'>
+                <h1 className='flex justify-center items-center font-Instrumental-sans text-9xl text-center'>Book a Pilot</h1>
+            </div>
 
             <section className='px-5'>
                 <div style={{ backgroundImage: `url(${pilot_asset})` }} className='flex justify-center items-center w-auto h-[650px] bg-cover bg-center rounded-2xl'>
