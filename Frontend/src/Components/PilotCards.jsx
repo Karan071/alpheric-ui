@@ -28,8 +28,8 @@ const PilotCards = ({
                     <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
 
                     <div className="flex items-center bg-white/20 px-6 py-1.5 rounded-full w-fit">
-                        <span className="text-white flex items-center mr-4">
-                            {duration} <img src={calender} className="w-4" />
+                        <span className="text-white flex items-center mr-4 gap-3">
+                            {duration} <img src={calender} className="w-6" />
                         </span>
 
                         <button

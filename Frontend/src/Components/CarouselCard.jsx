@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 const CarouselCard = ({ title, imageUrl, description, visitLink }) => {
     return (
-        <div className="relative w-80 h-130 mx-1 rounded-xl overflow-hidden shadow-lg group ">
+        <div className="relative w-80 h-130 mx-1 rounded-xl overflow-hidden shadow-lg group font-instrument-sans">
             <img
                 src={imageUrl}
                 alt={title}
