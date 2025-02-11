@@ -8,15 +8,15 @@ const Contact = () => {
     return (
         <section className='min-h-screen w-full px-15 flex items-center justify-start'>
             <motion.div
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
+            variants={fadeIn("left", 0.2)}
+            // initial="hidden"
             whileInView={"show"}
-            viewport={{once : false, amount :0.7 }}
+            viewport={{once : true, amount : 0.9 }}
             
             className='w-full max-w-4xl'>
                 <h3 className='text-3xl mb-4'>Shall we chat?</h3>
-                <h1 className='text-6xl font-bold mb-8'>hello@alpheric.com</h1>
-                <div className='flex gap-6 items-center'>
+                <h1 className='text-6xl font-bold mb-8 hover:underline'>hello@alpheric.com</h1>
+                <div className='flex gap-6 items-center hover:underline'>
                     <span className='text-9xl'>Let's</span>
                     <p>
                         <img className='h-auto w-6xl bg-sky-400 rounded-full' src={girl} />

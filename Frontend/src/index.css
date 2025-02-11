@@ -1,5 +1,5 @@
 /* Custom Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75,400..700;1,75,400..700&family=Instrument+Serif:ital@1&display=swap');
 
@@ -9,7 +9,30 @@
     --font-urbanist: "Urbanist", "mono";
     --font-Instrumental-serif: "Instrument-serif";
     --font-Instrumental-sans: "Instrument-sans";
+} */
+
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-urbanist: "Urbanist", sans-serif;
+    --font-instrument-serif: "Instrument Serif", serif;
+    --font-instrument-sans: "Instrument Sans", sans-serif;
 }
+
+.italic {
+    font-style: italic;
+}
+
+/* Sample usage for the fonts */
+/*  
+    <p class="font-[var(--font-urbanist)]">Urbanist Regular</p>
+    <p class="font-[var(--font-urbanist)] italic">Urbanist Italic</p>
+ */
 
 /* Hiding the scroll bar in Carosel */
 @layer utilities {

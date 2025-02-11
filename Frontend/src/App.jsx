@@ -7,8 +7,10 @@ import Hire from "./Pages/Hire"
 import Contact from './Pages/Contact'
 import Footer from './Pages/Footer'
 import Vision from './Pages/VisionIntoReality/Vision'
-import Pilot from './Pages/VisionIntoReality/Pilot'
 import Next from './Pages/VisionIntoReality/Next'
+import CustomerPage from "./Pages/CustomerPage"
+import Pilotpage from './Pages/Pilot/PilotPage'
+import SolutionPage from './Pages/Solutions/SolutionPage'
 function App() {
 
   return (
@@ -18,10 +20,12 @@ function App() {
         <HomePage />
         <Design/>
         <Questionaire/>
-        <Hire/>
         <Vision/>
-        <Pilot/>
+        <Pilotpage/>
         <Next/>
+        <CustomerPage/>
+        <SolutionPage/>
+        <Hire/>
         <Contact/>
         <Footer/>
       </div>

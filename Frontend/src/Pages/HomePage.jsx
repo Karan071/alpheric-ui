@@ -1,10 +1,10 @@
+import { useRef, useState, useEffect } from "react"
 import Spiral from "../assets/spiral.png"
 import asset from "../assets/asset.png"
 import alpheric_logo from "../assets/alpheric-a1.jpeg"
 import sample from "../assets/Videos/sample.mp4"
-import { useRef, useState, useEffect } from "react"
-import { X, VolumeOff, Volume2} from "lucide-react"
 import playButton from "../assets/Videos/play.png"
+import { X, VolumeOff, Volume2} from "lucide-react"
 import reelPoster from "../assets/reelPoster.png"
 import asset_1 from "../assets/Homeicons/asset-1.png"
 import asset_2 from "../assets/Homeicons/asset-2.png"
@@ -17,22 +17,35 @@ const HomePage = () => {
     const [isShowingPanel, setIsShowingPanel] = useState(true);
     const [isMuted, setIsMuted] = useState(true);
 
-    // useEffect(() => {
-    //     if (videoRef.current) {
-    //         videoRef.current.muted = true;
-    //     }
-    // }, []);
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.muted = true;
+            videoRef.current.autoplay = true;
+            // videoRef.current.playsInline = true;
+            videoRef.current.play()
+                .catch(error => {
+                    console.log("Video autoplay failed:", error);
+                });
+        }
+    }, []);
 
-    // const handleVolumeToggle = () => {
-    //     if (videoRef.current) {
-    //         videoRef.current.muted = !videoRef.current.muted;
-    //         setIsMuted(!isMuted);
-    //     }
-    // };
+    const handleVolumeToggle = () => {
+        if (videoRef.current) {
+            if (isMuted) {
+                videoRef.current.muted = false;
+                videoRef.current.volume = 1;
+            } else {
+                videoRef.current.muted = true;
+                videoRef.current.volume = 0;
+            }
+            setIsMuted(!isMuted);
+        }
+    };
 
     return (
         <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#F5F0FF]">
             <div className="container mx-auto my-5 px-2 h-screen flex items-center">
+            {/* <div className="w-full my-5 px-2 py-10 h-screen flex items-center"> */}
                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     {/* Left Section */}
                     <div className="md:w-1/2 h-full flex flex-col justify-center">
@@ -92,7 +105,7 @@ const HomePage = () => {
                                             <animate
                                                 attributeName="startOffset"
                                                 from="0"
-                                                to="100"
+                                                to="50"
                                                 dur="10s"
                                                 repeatCount="indefinite"
                                             />
@@ -110,54 +123,36 @@ const HomePage = () => {
 
                             
                             {isShowingPanel && (
-                                <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-md w-70 z-55">
+                                <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-4xl w-70 z-55">
                                     <div className="relative">
                                         <video
-                                            src={sample}
-                                            // src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
-                                            className="w-full object-cover rounded-xl"
+                                            // src={sample}
+                                            src="https://rondesignlab.com/video/common/intercom.mp4"
+                                            className="w-full object-cover rounded-4xl"
                                             ref={videoRef}
                                             id="videoPlayer"
                                             poster={reelPoster}
+                                            autoPlay
+                                            playsInline
+                                            muted
                                         />
                                         <button
                                             onClick={() => setIsShowingPanel(false)}
-                                            className="absolute top-4 right-4 bg-white p-2 rounded-md text-black z-10"
+                                            className="absolute top-4 right-4 bg-white p-2 rounded-xl text-black z-10 hover:bg-black hover:text-white "
                                         >
                                             <X />
                                         </button>
 
-                                        {
-                                        /* <button
-                                            onClick={handleVolumeToggle}
-                                            className="absolute top-4 left-4 bg-white p-1.5 rounded-3xl text-black z-10"
-                                        >
-                                            <VolumeOff />
-                                        </button>
                                         
                                         <button
-                                            className="absolute top-4 left-4 bg-white p-1.5 rounded-3xl text-black z-10"
+                                            onClick={handleVolumeToggle}
+                                            className="absolute top-4 left-4 bg-white p-2 rounded-xl text-black z-10 hover:bg-black hover:text-white"
                                         >
-                                            <Volume2 />
-                                        </button> */
-                                        }
-
-                                        <button
-                                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:bg-white/10 rounded-full p-4"
-                                            onClick={() => {
-                                                if (videoRef.current.paused) {
-                                                    videoRef.current.play();
-                                                } else {
-                                                    videoRef.current.pause();
-                                                }
-                                            }}
-                                        >
-                                            <img className="w-20"
-                                            src={playButton}
-                                            alt="Play Button" />
+                                            {isMuted ? <VolumeOff /> : <Volume2 />}
                                         </button>
+                                        
 
-                                        <button className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-35 h-10 border bg-white text-black font-medium rounded-full py-2 text-md hover:bg-slate-500 transition">
+                                        <button className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-40 h-14 bg-black text-white font-medium rounded-full py-2 text-xl hover:bg-white transition hover:text-black">
                                             Let's Talk 👋
                                         </button>
                                     </div>

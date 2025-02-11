@@ -1,5 +1,6 @@
 import { Download } from 'lucide-react';
 import React from 'react';
+const date = new Date();
 
 const Footer = () => {
     return (
@@ -10,10 +11,10 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl mb-4">Say Hello 👋</h3>
                         <div className="space-y-2">
-                            <p>LinkedIn</p>
-                            <p>Instagram</p>
-                            <p>Dribbble</p>
-                            <p>Behance</p>
+                            <p><a href="">LinkedIn</a></p>
+                            <p><a href="https://www.instagram.com/alpheric.consultants/" target='_blank'>Instagram</a></p>
+                            <p><a href="">Dribbble</a></p>
+                            <p><a href="">Behance</a></p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +57,7 @@ const Footer = () => {
 
                 {/* Footer Links */}
                 <div className="flex justify-between items-center text-sm text-gray-600">
-                    <p>© 2025, Alpheric</p>
+                    <p>© {date.getFullYear()} Alpheric</p>
                     <div className="flex gap-8">
                         <a href="#">Sitemap</a>
                         <a href="#">Privacy Policy</a>
