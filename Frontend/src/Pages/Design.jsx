@@ -10,7 +10,7 @@ const Design = () => {
     return (
         <section id="about">
             <div
-                className='max-w-full flex flex-col px-18 mt-10'>
+                className='max-w-full flex flex-col px-[116px] mt-10'>
                 <p className='text-[84px] font-instrument-sans font-[600] mb-4'>We do amazing things</p>
                 <div className='flex items-center justify-start gap-4 font-instrument-serif-italics text-[84px] mb-10'>
                     <MoveRight size={60} /> oh, with amazing people too</div>

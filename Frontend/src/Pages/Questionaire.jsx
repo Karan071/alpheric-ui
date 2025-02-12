@@ -36,10 +36,10 @@ const Questionaire = () => {
     };
 
     return (
-        <section className='max-w-full min-h-screen px-12 flex flex-row items-center gap-20' >
+        <section className='max-w-full min-h-screen px-[116px] flex flex-row items-center gap-20' >
             <div className='flex flex-col gap-9 w-1/2'>
-                <h1 className='font-instrument-sans font-semibold text-8xl mt-5'>Answer a few questions to unlock Insights into</h1>
-                <h3 className='font-instrument-serif italic text-6xl'>Innovation with AI and Cloud</h3>
+                <h1 className='font-instrument-sans font-semibold text-[84px] mt-5'>Answer a few questions to unlock Insights into</h1>
+                <h3 className='font-instrument-serif italic text-[74px]'>Innovation with AI and Cloud</h3>
             </div>
             <div >
             <QuestionaireCard

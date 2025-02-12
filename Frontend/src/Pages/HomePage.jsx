@@ -10,6 +10,7 @@ import asset_1 from "../assets/Homeicons/asset-1.png"
 import asset_2 from "../assets/Homeicons/asset-2.png"
 import asset_3 from "../assets/Homeicons/asset-3.png"
 import asset_4 from "../assets/Homeicons/asset-4.png"
+import alpheric_animation from "../assets/alpheric-gif.gif"
 
 // import playButton from "../assets/Videos/play.png"
 
@@ -44,9 +45,8 @@ const HomePage = () => {
     };
 
     return (
-        <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#F5F0FF]">
-            {/* <div className="container mx-auto my-5 h-screen flex items-center"> */}
-            <div className="w-full my-5 px-10 py-10 h-screen flex items-center">
+        <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#F5F0FF] overflow-clip">
+            <div className="w-full my-5 px-[116px] h-screen flex items-center">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     {/* Left Section */}
                     <div className="h-full flex flex-col justify-center">
@@ -61,14 +61,14 @@ const HomePage = () => {
                             </button>
 
                             <div className="flex gap-6 font-urbanist">
-                                <p className="text-lg text-gray-600">You'll Be Talking With Our Creative Talents:</p>
-                                <div className="flex -space-x-3">
-                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1}/></div>
-                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_2}/></div>
-                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_3}/></div>
-                                    <div className="w-9 h-9  border-2 border-white bg-gray-200 shadow-lg"><img src={asset_4}/></div>
+                                <p className="text-[20px] text-gray-600">You'll Be Talking With Our Creative Talents:</p>
+                                <div className="flex space-x-2">
+                                    <div className="w-[32px] h-[32px] border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1}/></div>
+                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_2}/></div>
+                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_3}/></div>
+                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_4}/></div>
                                 </div>
-                                <p className="text-lg text-gray-600 max-w-md">
+                                <p className="text-[20px] text-gray-600 max-w-md">
                                     Let's Craft A Digital Strategy Powered By
                                     Award-Winning Tech To Drive Real Results And
                                     Grow Your Business — Together!  🚀
@@ -81,44 +81,19 @@ const HomePage = () => {
                     {/* Right Section */}
                     <div className="md:w-1/2 relative h-full flex items-center justify-end">
                         {/* Circular Logo */}
-                        <div className="absolute top-8 left-8">
+                        <div className="absolute left-10 bottom-50 ">
                             <div className="relative w-34 h-34">
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-24 h-24 rounded-full border border-black flex items-center justify-center overflow-hidden">
-                                        <img src={alpheric_logo} alt="alpheric-logo" className="w-full h-full object-cover" />
+                                    <div className="w-30 h-30 rounded-full flex items-center justify-center ">
+                                        <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
-                                <svg className="animate-spin-slow absolute inset-1" viewBox="0 0 100 100">
-                                    <defs>
-                                        <path
-                                            id="circlePath"
-                                            d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
-                                            fill="none"
-                                        />
-                                    </defs>
-                                    <text>
-                                        <textPath 
-                                            href="#circlePath" 
-                                            fontSize="9" 
-                                            startOffset="1"
-                                        >
-                                            • FOLLOW OUR DIGITAL JOURNEY • FOLLOW OUR DIGITAL JOURNEY
-                                            <animate
-                                                attributeName="startOffset"
-                                                from="0"
-                                                to="50"
-                                                dur="10s"
-                                                repeatCount="indefinite"
-                                            />
-                                        </textPath>
-                                    </text>
-                                </svg>
                             </div>
                         </div>
 
                         {/* Spiral Image */}
                         <div className= "relative">
-                            <div className="w-[900px] mx-auto h-[690px]">
+                            <div className="w-[900px] mx-auto h-[690px] absolute right-[-260px] top-[-400px]">
                                 <img src={Spiral} />
                             </div>
                             {isShowingPanel && (

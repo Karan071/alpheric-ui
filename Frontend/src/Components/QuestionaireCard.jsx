@@ -26,7 +26,7 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
             transition={{ y: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.2 } }}
             className="relative w-full max-w-[700px] font-instrument-sans"
         >
-            <div className="relative bg-white w-full h-[350px] p-8 rounded-3xl shadow-2xl overflow-hidden gap-8 ">
+            <div className="relative bg-white w-[673px] h-[353px] p-8 rounded-3xl shadow-2xl overflow-hidden gap-8 ">
                 {question.type !== "special" ? (
                     <>
                         <div className="flex items-center justify-center gap-6 mb-10">

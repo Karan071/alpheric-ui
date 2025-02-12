@@ -18,11 +18,13 @@ const Card = ({ title, description, imageUrl, listItems }) => {
 
                 {listItems && listItems.length > 0 && (
                     <div>
-                        <ul className="space-y-4 text-[32px] text-gray-600 font-urbanist">
+                        <ol className="space-y-4 text-[32px] text-gray-600 font-urbanist list-disc">
+                            <div className='px-6'>
                             {listItems.map((item, index) => (
-                                <li key={index}>• {item}</li>
+                                <li key={index}> {item}</li>
                             ))}
-                        </ul>
+                            </div>
+                        </ol>
                     </div>
                 )}
             </div>

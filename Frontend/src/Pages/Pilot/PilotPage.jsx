@@ -9,7 +9,7 @@ import pilot4 from '../../assets/Pilot_assets/pilot_asset_4.png'
 const Pilotpage = () => {
     return (
         <div className="space-y-16">
-            <h1 className='h-screen flex justify-center items-center font-instrument-sans font-semibold text-[140px] px-15'>Book a Pilot</h1>
+            <h1 className='h-screen flex justify-center items-center font-instrument-sans font-semibold text-[140px] px-[116px]'>Book a Pilot</h1>
 
             <PilotSection
                 title="Pilot for You"

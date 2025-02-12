@@ -17,14 +17,14 @@ const SolutionCard = ({ title, description, imageUrl, tags }) => {
             )}
 
             {/* Information Section */}
-            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left w-full">
+            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left w-full px-2">
                 {title && (
-                    <h1 className="font-instrument-sans font-semibold text-5xl md:text-6xl lg:text-7xl leading-tight">
+                    <h1 className="font-instrument-sans font-semibold text-[96px] leading-tight px-2">
                         {title}
                     </h1>
                 )}
                 {description && (
-                    <p className="font-instrument-sans text-lg md:text-2xl lg:text-3xl text-gray-600 mt-4 md:mt-6">
+                    <p className="font-instrument-sans text-[36px] text-gray-600 mt-4 md:mt-6 px-2">
                         {description}
                     </p>
                 )}

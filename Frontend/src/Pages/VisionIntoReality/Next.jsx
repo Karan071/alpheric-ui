@@ -1,5 +1,4 @@
 import React from 'react'
-import comma from "../../assets/comma.svg"
 const Next = () => {
     return (
         <section className='h-screen flex flex-col justify-center items-center font-instrument-sans'>

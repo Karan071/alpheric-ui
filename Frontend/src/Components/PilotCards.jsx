@@ -12,7 +12,7 @@ const PilotCards = ({
     return (
         <div className="font-instrument-sans relative w-full h-[650px] flex justify-center overflow-hidden">
 
-            <div className="absolute inset-0 left-14 right-14 h-full rounded-[32px] overflow-hidden">
+            <div className="absolute inset-0 left-[116px] right-[116px] h-full rounded-[32px] overflow-hidden">
                 <img
                     src={imageSrc}
                     alt="Pilot Background"
