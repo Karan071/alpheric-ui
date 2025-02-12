@@ -10,7 +10,7 @@ const PilotCards = ({
     imageSrc,
 }) => {
     return (
-        <div className="font-instrument-sans relative w-full h-[550px] flex justify-center overflow-hidden">
+        <div className="font-instrument-sans relative w-full h-[650px] flex justify-center overflow-hidden">
 
             <div className="absolute inset-0 left-14 right-14 h-full rounded-[32px] overflow-hidden">
                 <img
@@ -22,19 +22,19 @@ const PilotCards = ({
             </div>
 
 
-            <div className="relative h-full flex items-center px-30 max-w-7xl mx-auto w-full">
+            <div className="relative h-full flex items-center max-w-7xl mx-auto w-full">
                 <div className="max-w-xl">
                     <h1 className="text-5xl font-bold text-white mb-4">{title}</h1>
                     <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
 
                     <div className="flex items-center bg-white/20 px-6 py-1.5 rounded-full w-fit">
-                        <span className="text-white flex items-center mr-4 gap-3">
+                        <span className="text-white flex items-center mr-4 gap-3 font-semibold">
                             {duration} <img src={calender} className="w-6" />
                         </span>
 
                         <button
                             onClick={onButtonClick}
-                            className="bg-white text-[#3f6088] px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all"
+                            className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all"
                         >
                             {buttonText}
                         </button>

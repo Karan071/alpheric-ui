@@ -13,11 +13,11 @@ const Contact = () => {
             whileInView={"show"}
             viewport={{once : true, amount : 0.9 }}
             
-            className='w-full max-w-4xl'>
+            className='w-full max-w-4xl font-instrument-sans'>
                 <h3 className='text-3xl mb-4'>Shall we chat?</h3>
                 <h1 className='text-6xl font-bold mb-8 hover:underline'>hello@alpheric.com</h1>
-                <div className='flex gap-6 items-center hover:underline'>
-                    <span className='text-9xl'>Let's</span>
+                <div className='flex gap-6 items-center hover:underline font-semibold'>
+                    <span className='text-9xl'>Let’s</span>
                     <p>
                         <img className='h-auto w-6xl bg-sky-400 rounded-full' src={girl} />
                     </p>

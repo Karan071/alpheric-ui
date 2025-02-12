@@ -15,6 +15,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+/* Instrument serif - italics */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap'); 
 
 @import "tailwindcss";
 
@@ -22,6 +24,7 @@
     --font-urbanist: "Urbanist", sans-serif;
     --font-instrument-serif: "Instrument Serif", serif;
     --font-instrument-sans: "Instrument Sans", sans-serif;
+    --font-instrument-serif-italics : "Instrument Serif";
 }
 
 .italic {

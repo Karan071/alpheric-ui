@@ -1,33 +1,3 @@
-// import React from 'react'
-
-// const QuestionaireCard = () => {
-//     return (
-//         <div className='relative bg-white w-[500px] p-8 rounded-2xl shadow-sm overflow-hidden m-20'>
-//             <div className='flex items-center justify-center gap-4 mb-8'>
-//                 <div className='w-7 h-7 rounded-full border-2 border-black flex items-center justify-center font-medium'>1</div>
-//                 <div className='text-gray-300 font-medium'>2</div>
-//                 <div className='text-gray-300 font-medium'>3</div>
-//             </div>
-
-//             <h2 className='text-center text-2xl font-medium mb-12 px-4'>
-//                 Are you taking advantage of cloud computing to reduce infrastructure costs and increase agility?
-//             </h2>
-
-//             {/* Buttons */}
-//             <button className='absolute -left-2 -bottom-5 bg-black text-white p-8 text-2xl rounded-full font-medium'>
-//                 No
-//             </button>
-//             <button className='absolute -right-3 -bottom-5 bg-black text-white p-8 text-2xl rounded-full font-medium'>
-//                 Yes
-//             </button>
-//         </div>
-//     )
-// }
-
-// export default QuestionaireCard
-
-
-
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -54,12 +24,12 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
             animate="center"
             exit="exit"
             transition={{ y: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.2 } }}
-            className="relative w-full max-w-[700px]"
+            className="relative w-full max-w-[700px] font-instrument-sans"
         >
-            <div className="relative bg-white w-full p-8 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="relative bg-white w-full h-[350px] p-8 rounded-3xl shadow-2xl overflow-hidden gap-8 ">
                 {question.type !== "special" ? (
                     <>
-                        <div className="flex items-center justify-center gap-4 mb-8">
+                        <div className="flex items-center justify-center gap-6 mb-10">
                             {Array.from({ length: totalSteps }, (_, index) => (
                                 <div
                                     key={index + 1}
@@ -70,7 +40,7 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                                 </div>
                             ))}
                         </div>
-                        <h2 className="text-center text-2xl font-medium mb-12 px-4">
+                        <h2 className="text-center text-3xl font-medium mb-12 px-4">
                             {question.text}
                         </h2>
                         <div className="flex justify-between">
@@ -89,7 +59,7 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                         </div>
                     </>
                 ) : (
-                    <div className="text-center pb-14">
+                    <div className="text-center">
                         <div className="inline-block px-4 py-1 rounded-full bg-white border text-gray-600 mb-8 font-semibold text-lg">
                             Insights
                         </div>

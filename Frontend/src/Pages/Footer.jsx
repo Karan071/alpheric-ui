@@ -6,10 +6,10 @@ const Footer = () => {
     return (
         <footer className=" container mx-auto px-6 py-12 font-urbanist mt-20">
             <div className="grid grid-cols-3 gap-20 mb-20">
-                {/* Left Column */}
+                
                 <div className="space-y-6 text-4xl gap-4">
                     <div>
-                        <h3 className="text-xl mb-4">Say Hello 👋</h3>
+                        <h3 className="mb-4">Say Hello 👋</h3>
                         <div className="space-y-2">
                             <p><a href="">LinkedIn</a></p>
                             <p><a href="https://www.instagram.com/alpheric.consultants/" target='_blank'>Instagram</a></p>
@@ -19,10 +19,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Middle Column */}
+                
                 <div className="space-y-6 text-4xl">
                     <div>
-                        <h3 className="text-xl mb-4">Consult</h3>
+                        <h3 className="mb-4">Consult</h3>
                         <div className="space-y-2">
                             <p>Design</p>
                             <p>Build</p>
@@ -33,10 +33,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Right Column */}
+                
                 <div className="space-y-6 text-4xl">
                     <div>
-                        <h3 className="text-xl mb-4">About Us</h3>
+                        <h3 className="mb-4">About Us</h3>
                         <div className="space-y-2">
                             <p>Career</p>
                             <p>Actions</p>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom Section */}
+            
             <div className="border-t pt-8">
                 <div className="mb-8">
                     <p className="text-gray-600 mb-4">For whose daily routines involve PDF presentations</p>
@@ -55,7 +55,7 @@ const Footer = () => {
                     </button>
                 </div>
 
-                {/* Footer Links */}
+                
                 <div className="flex justify-between items-center text-sm text-gray-600">
                     <p>© {date.getFullYear()} Alpheric</p>
                     <div className="flex gap-8">

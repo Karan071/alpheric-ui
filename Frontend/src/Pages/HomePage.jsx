@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react"
 import Spiral from "../assets/spiral.png"
 import asset from "../assets/asset.png"
 import sample from "../assets/Videos/sample.mp4"
-// import playButton from "../assets/Videos/play.png"
+
 import { X, VolumeOff, Volume2} from "lucide-react"
 import reelPoster from "../assets/reelPoster.png"
 import alpheric_logo from "../assets/alpheric-a1.jpeg"
@@ -11,6 +11,7 @@ import asset_2 from "../assets/Homeicons/asset-2.png"
 import asset_3 from "../assets/Homeicons/asset-3.png"
 import asset_4 from "../assets/Homeicons/asset-4.png"
 
+// import playButton from "../assets/Videos/play.png"
 
 const HomePage = () => {
     const videoRef = useRef(null);
@@ -21,7 +22,7 @@ const HomePage = () => {
         if (videoRef.current) {
             videoRef.current.muted = true;
             videoRef.current.autoplay = true;
-            // videoRef.current.playsInline = true;
+            videoRef.current.playsInline = true;
             videoRef.current.play()
                 .catch(error => {
                     console.log("Video autoplay failed:", error);
@@ -44,11 +45,11 @@ const HomePage = () => {
 
     return (
         <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#F5F0FF]">
-            <div className="container mx-auto my-5 px-2 h-screen flex items-center">
-            {/* <div className="w-full my-5 px-2 py-10 h-screen flex items-center"> */}
+            {/* <div className="container mx-auto my-5 h-screen flex items-center"> */}
+            <div className="w-full my-5 px-10 py-10 h-screen flex items-center">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     {/* Left Section */}
-                    <div className="md:w-1/2 h-full flex flex-col justify-center">
+                    <div className="h-full flex flex-col justify-center">
                         <div className="flex items-center gap-2 mb-2">
                             <img src={asset} alt="Image asset" />
                         </div>
@@ -78,7 +79,7 @@ const HomePage = () => {
                     </div>
 
                     {/* Right Section */}
-                    <div className="md:w-1/2 relative h-full flex items-center justify-center">
+                    <div className="md:w-1/2 relative h-full flex items-center justify-end">
                         {/* Circular Logo */}
                         <div className="absolute top-8 left-8">
                             <div className="relative w-34 h-34">
@@ -116,12 +117,10 @@ const HomePage = () => {
                         </div>
 
                         {/* Spiral Image */}
-                        <div className="mt-12 relative">
-                            <div className="aspect-square w-full max-w-xl mx-auto">
+                        <div className= "relative">
+                            <div className="w-[900px] mx-auto h-[690px]">
                                 <img src={Spiral} />
                             </div>
-
-                            
                             {isShowingPanel && (
                                 <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-4xl w-70 z-55">
                                     <div className="relative">

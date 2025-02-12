@@ -1,9 +1,11 @@
 import React from 'react';
 import PilotSection from "../../Components/PilotCards"
+// Images imports
 import pilot1 from '../../assets/Pilot_assets/pilot_asset_1.jpeg'
 import pilot2 from '../../assets/Pilot_assets/pilot_asset_2.jpeg'
 import pilot3 from '../../assets/Pilot_assets/pilot_asset_3.png'
 import pilot4 from '../../assets/Pilot_assets/pilot_asset_4.png'
+
 const Pilotpage = () => {
     return (
         <div className="space-y-16">
@@ -33,7 +35,7 @@ const Pilotpage = () => {
                 duration="4 weeks"
                 buttonText="Book a pilot"
                 onButtonClick={() => console.log('Third Pilot button clicked')}
-                imageSrc={pilot3} // Another image
+                imageSrc={pilot3}
             />
             <PilotSection
                 title="Pilot for Enterprise"
@@ -41,7 +43,7 @@ const Pilotpage = () => {
                 duration="6 weeks"
                 buttonText="Book a pilot "
                 onButtonClick={() => console.log('Second Pilot button clicked')}
-                imageSrc={pilot4} // Using a different image
+                imageSrc={pilot4}
             />
         </div>
     );
