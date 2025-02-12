@@ -14,14 +14,14 @@ const Contact = () => {
             viewport={{once : true, amount : 0.9 }}
             
             className='w-full max-w-4xl font-instrument-sans'>
-                <h3 className='text-3xl mb-4'>Shall we chat?</h3>
-                <h1 className='text-6xl font-bold mb-8 hover:underline'>hello@alpheric.com</h1>
-                <div className='flex gap-6 items-center hover:underline font-semibold'>
-                    <span className='text-9xl'>Let’s</span>
+                <h3 className='text-[40px] mb-4'>Shall we chat?</h3>
+                <h1 className='text-[64px] font-bold mb-30 hover:underline'>hello@alpheric.com</h1>
+                <div className='flex items-center hover:underline font-semibold mb-30 gap-3'>
+                    <span className='text-[140px]'>Let’s</span>
                     <p>
-                        <img className='h-auto w-6xl bg-sky-400 rounded-full' src={girl} />
+                        <img className='h-[125px] w-[250px] bg-sky-400 rounded-full' src={girl} />
                     </p>
-                    <span className='text-9xl'>talk</span>
+                    <span className='text-[140px]'>talk</span>
                     <button className='ml-4 px-6 py-2 rounded-full hover:bg-black hover:text-white transition-colors duration-300'>
                         <MoveRight size={90} />
                     </button>
