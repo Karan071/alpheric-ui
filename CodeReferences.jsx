@@ -1,140 +1,513 @@
-import React from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import SolutionCard from "../../Components/SolutionCard";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-// Images imports
-import Business from "../../assets/Solutions/Business.jpg";
-import Consult from "../../assets/Solutions/Consult.jpg";
-import Build from "../../assets/Solutions/Build.jpg";
-import Design from "../../assets/Solutions/Design.jpg";
-import Host from "../../assets/Solutions/Host.jpg";
-import Market from "../../assets/Solutions/Market.jpg";
+export default function Customers() {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end end"],
+    });
 
-const cardsData = [
-    {
-        title: "Your Business, Simplified",
-        description:
-            "We’re here to handle it all so you can focus on what matters most.",
-        imageUrl: Business,
-        tags: [],
-    },
-    {
-        title: "Consult",
-        description:
-            "Gain clarity with expert advice on strategy, business growth and scaling solutions.",
-        imageUrl: Consult,
-        tags: ["Technology", "Design", "Cyber Security", "Business Consulting"],
-    },
-    {
-        title: "Build",
-        description:
-            "Develop solutions tailored to your goals, from robust platforms to seamless integrations.",
-        imageUrl: Build,
-        tags: ["Mobile", "Web App", "AI & Automation", "Enterprise Application"],
-    },
-    {
-        title: "Design",
-        description:
-            "Craft stunning, user-friendly experiences that connect with your audience.",
-        imageUrl: Design,
-        tags: ["Branding", "UX/UI Design", "Concept Design", "Product Design"],
-    },
-    {
-        title: "Host",
-        description:
-            "Ensure your digital presence is reliable, fast, and secure with premium hosting solutions.",
-        imageUrl: Host,
-        tags: ["Web Hosting", "Cloud", "Server Management", "AWS", "Google Cloud", "Azure"],
-    },
-    {
-        title: "Market",
-        description:
-            "Amplify your reach with strategies that drive real results and engage your audience.",
-        imageUrl: Market,
-        tags: ["Digital Growth", "Organic Marketing", "Media Buying", "Performance Marketing"],
-    },
-];
+    const translateX = useTransform(scrollYProgress, [0, 3], [0, 600]);
 
-const SolutionPage = () => {
+    const opacity1 = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
+    const opacity2 = useTransform(scrollYProgress, [0.2, 0.45, 0.7], [0, 1, 0]);
+    const opacity3 = useTransform(scrollYProgress, [0.5, 0.9], [0, 0.9]);
+
+    const y1 = useTransform(scrollYProgress, [0, 0.3], [0, -250]);
+    const y2 = useTransform(scrollYProgress, [0.25, 0.55], [250, 0]);
+    const y3 = useTransform(scrollYProgress, [0.5, 0.8], [250, 0]);
+
     return (
-        <div>
-            {/* Hero Section */}
-            <div className="h-screen flex flex-col font-instrument-sans justify-center items-center">
-                <div className="flex align-center items-center text-[140px] text-center font-semibold">
-                    What Are We Fighting Against?
+        <section className="relative w-full h-[300vh] flex items-center justify-center bg-white">
+            <div className="w-full max-w-7xl flex">
+                {/* Left Side */}
+                <div className="w-1/2 flex flex-col justify-start p-5 sticky top-10 h-[100vh]">
+                    <h2 className="text-[84px] mb-16 font-poppins font-semibold">Customers</h2>
+                    <ul className="text-lg space-y-40 relative h-full">
+                        <motion.div
+                            style={{ opacity: opacity1, y: y1 }}
+                            className="absolute top-0 flex flex-col gap-2 transition-opacity duration-1000 ease-in-out"
+                        >
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1 }}
+                            >
+                                <p className="text-[32px] text-gray-700">
+                                    <span className="text-[18px] font-[500]">01 </span>Visibility &amp; Communication
+                                </p>
+                                <p className="text-[18px] pl-8 text-gray-500 mt-2">
+                                    Take the assessment and get your career matches, personality archetype, and more along the way.
+                                </p>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div
+                            style={{ opacity: opacity2, y: y2 }}
+                            className="absolute top-0 transition-opacity duration-500 ease-in-out"
+                        >
+                            <div>
+                                <p className="text-[32px] text-gray-700">
+                                    <span className="text-[18px] font-light">02 </span>Operational Prioritization
+                                </p>
+                                <p className="text-[18px] pl-8 text-gray-500 text-base mt-2">
+                                    Find out what makes you stand apart from others and why certain careers are great fits for you.
+                                </p>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            style={{ opacity: opacity3, y: y3 }}
+                            className="absolute top-0 transition-opacity duration-500 ease-in-out"
+                        >
+                            <div>
+                                <p className="text-[32px] text-gray-700">
+                                    <span className="text-[18px] font-light">03 </span>Justification &amp; Planning
+                                </p>
+                                <p className=" text-[18px] pl-8 text-gray-500 text-base mt-2">
+                                    Find all the information you need to know about your dream career. Then make a plan to get there.
+                                </p>
+                            </div>
+                        </motion.div>
+                    </ul>
                 </div>
-                <div className="text-gray-500 text-[40px] text-center">
-                    Users not engaging with your design or project
-                </div>
-                <div className="text-gray-500 text-[38px] text-center">
-                    Let's turn that challenge into an opportunity.
+
+                {/* Right Side - Sticky Animated Logos */}
+                <div
+                    className="w-1/2 h-[200vh] sticky top-0 flex items-center justify-center overflow-visible"
+                    ref={ref}
+                >
+                    <motion.div style={{ x: translateX }} className="relative w-[800px] top-60">
+                        {/* Top Row */}
+                        <div className="flex items-center justify-center gap-8 mb-8">
+                            <div className="w-6 h-6 bg-white rounded-full" />
+                            <div className="w-2 h-2 bg-white rounded-full" />
+                            <motion.div className="w-28 h-28 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="./src/assets/Customer-icons/Gucci.png"
+                                    alt="Gucci"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/coca-cola.png"
+                                    alt="coca-cola"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+                            <motion.div className="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rolex.png"
+                                    alt="Rolex"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+
+                            {/* Big circle 2 */}
+
+
+                        </div>
+
+                        {/* Second Row */}
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-18">
+                            <div className="w-7 h-7 bg-white rounded-full" />
+                            <motion.div className="w-28 h-28 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/hm.png"
+                                    alt="H&M"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Puma.png"
+                                    alt="Puma"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/versace.png"
+                                    alt="Versace"
+                                    className="w-18 h-18 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+
+                        {/* Third Row */}
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-8">
+                            <div className="w-4 h-4 bg-white rounded-full" />
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Starbuck.png"
+                                    alt="Starbucks"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-28 h-28 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Hyundai.png"
+                                    alt="Hyundai"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-28 h-28 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rage.png"
+                                    alt="Zara"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+
+                        {/* Fourth Row */}
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-8">
+                            <motion.div className="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/vl.png"
+                                    alt="Louis Vuitton"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Double.png"
+                                    alt="Mastercard"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Chanel.png"
+                                    alt="Chanel"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+
+                        {/* Fifth Row */}
+
+                        <div className="flex items-center justify-end gap-4 mb-8">
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Lacoste.png"
+                                    alt="Lacoste"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rolex.png"
+                                    alt="Rolex"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/versace.png"
+                                    alt="versace"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+
+
+
+
+                        </div>
+
+
+                        {/* Sixth Row */}
+                        <div className="flex items-center justify-center gap-8 mb-8">
+                            <div className="w-6 h-6 bg-[#5AC8DC] rounded-full" />
+                            <div className="w-2 h-2 bg-[#5AC8DC] rounded-full" />
+                            <motion.div className="w-28 h-28 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="./src/assets/Customer-icons/Gucci.png"
+                                    alt="Gucci"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/coca-cola.png"
+                                    alt="coca-cola"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-20 h-20 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rolex.png"
+                                    alt="Rolex"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+                            <div className="w-6 h-6 bg-[#5AC8DC] rounded-full" />
+                        </div>
+
+                        {/* Seventh Row */}
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-18">
+                            <div className="w-7 h-7 bg-[#5AC8DC] rounded-full" />
+                            <motion.div className="w-28 h-28 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/hm.png"
+                                    alt="H&M"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Puma.png"
+                                    alt="Puma"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/versace.png"
+                                    alt="Versace"
+                                    className="w-18 h-18 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+
+                        {/* Eighth Row */}
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-8">
+                            <div className="w-4 h-4 bg-[#5AC8DC] rounded-full" />
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Starbuck.png"
+                                    alt="Starbucks"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-28 h-28 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Hyundai.png"
+                                    alt="Hyundai"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-28 h-28 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rage.png"
+                                    alt="Zara"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+                            <div className="w-7 h-7 bg-[#5AC8DC] rounded-full" />
+                        </div>
+
+                        {/* Ninth Row */}
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-8">
+                            <motion.div className="w-20 h-20 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/vl.png"
+                                    alt="Louis Vuitton"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Double.png"
+                                    alt="Mastercard"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Chanel.png"
+                                    alt="Chanel"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+                            <div className="w-7 h-7 bg-[#5AC8DC] rounded-full" />
+                        </div>
+
+                        {/* Tenth Row */}
+                        <div className="flex items-center justify-end gap-4 mb-8">
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Lacoste.png"
+                                    alt="Lacoste"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rolex.png"
+                                    alt="Rolex"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-20 h-20 bg-[#5AC8DC] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/versace.png"
+                                    alt="versace"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+
+                        {/* -- #B3FEA9 Rows -- */}
+                        <div className="flex items-center justify-center gap-8 mb-8">
+                            <div className="w-6 h-6 bg-[#B3FEA9] rounded-full" />
+                            <div className="w-2 h-2 bg-[#B3FEA9] rounded-full" />
+                            <motion.div className="w-28 h-28 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="./src/assets/Customer-icons/Gucci.png"
+                                    alt="Gucci"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/coca-cola.png"
+                                    alt="coca-cola"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-20 h-20 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rolex.png"
+                                    alt="Rolex"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+                            <div className="w-6 h-6 bg-[#B3FEA9] rounded-full" />
+                        </div>
+
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-18">
+                            <div className="w-7 h-7 bg-[#B3FEA9] rounded-full" />
+                            <motion.div className="w-28 h-28 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/hm.png"
+                                    alt="H&M"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Puma.png"
+                                    alt="Puma"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/versace.png"
+                                    alt="Versace"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-8">
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Starbuck.png"
+                                    alt="Starbucks"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+
+                            <motion.div className="w-28 h-28 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Hyundai.png"
+                                    alt="Hyundai"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-28 h-28 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rage.png"
+                                    alt="Zara"
+                                    className="w-20 h-20 object-contain"
+                                />
+                            </motion.div>
+                            <div className="w-7 h-7 bg-[#B3FEA9] rounded-full" />
+                        </div>
+
+                        {/* Ninth Row */}
+                        <div className="flex items-center justify-end gap-8 mb-4 mr-8">
+                            <motion.div className="w-20 h-20 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/vl.png"
+                                    alt="Louis Vuitton"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Double.png"
+                                    alt="Mastercard"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Chanel.png"
+                                    alt="Chanel"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+                            <div className="w-7 h-7 bg-[#B3FEA9] rounded-full" />
+                        </div>
+
+                        {/* Tenth Row */}
+                        <div className="flex items-center justify-end gap-4 mb-8">
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Lacoste.png"
+                                    alt="Lacoste"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-24 h-24 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/Rolex.png"
+                                    alt="Rolex"
+                                    className="w-16 h-16 object-contain"
+                                />
+                            </motion.div>
+
+                            <motion.div className="w-20 h-20 bg-[#B3FEA9] rounded-full shadow-sm flex items-center justify-center p-4">
+                                <img
+                                    src="/src/assets/Customer-icons/versace.png"
+                                    alt="versace"
+                                    className="w-10 h-10 object-contain"
+                                />
+                            </motion.div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
-
-            {/* Parallax Section */}
-            <Parallax pages={cardsData.length}>
-                {cardsData.map((card, index) => (
-                    <React.Fragment key={index}>
-                        {/* Sticky Image Layer */}
-                        <ParallaxLayer
-                            offset={index}
-                            speed={0}
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                            }}
-                        >
-                            <div className="flex-1 flex justify-center">
-                                <img
-                                    src={card.imageUrl}
-                                    alt={card.title ? `${card.title} illustration` : 'Card illustration'}
-                                    className="w-full max-w-[350px] md:max-w-[450px] lg:max-w-[594px] h-auto md:h-[600px] lg:h-[700px] object-cover rounded-[36px] shadow-lg"
-                                />
-                            </div>
-                        </ParallaxLayer>
-
-                        {/* Scrolling Text Layer */}
-                        <ParallaxLayer
-                            offset={index}
-                            speed={0.5}
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "flex-end",
-                                paddingRight: "10%",
-                            }}
-                        >
-                            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left w-full px-2">
-                                {card.title && (
-                                    <h1 className="font-instrument-sans font-semibold text-[96px] leading-tight px-2">
-                                        {card.title}
-                                    </h1>
-                                )}
-                                {card.description && (
-                                    <p className="font-instrument-sans text-[36px] text-gray-600 mt-4 md:mt-6 px-2">
-                                        {card.description}
-                                    </p>
-                                )}
-                                {card.tags && card.tags.length > 0 && (
-                                    <div className="flex flex-wrap mt-4">
-                                        {card.tags.map((tag, i) => (
-                                            <span
-                                                key={i}
-                                                className="px-3 py-1 bg-gray-200 rounded-full text-sm m-1"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        </ParallaxLayer>
-                    </React.Fragment>
-                ))}
-            </Parallax>
-        </div>
+        </section>
     );
-};
-
-export default SolutionPage;
+}

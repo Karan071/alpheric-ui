@@ -3,7 +3,7 @@ import Spiral from "../assets/spiral.png"
 import asset from "../assets/asset.png"
 import sample from "../assets/Videos/sample.mp4"
 
-import { X, VolumeOff, Volume2} from "lucide-react"
+import { X, VolumeOff, Volume2 } from "lucide-react"
 import reelPoster from "../assets/reelPoster.png"
 import alpheric_logo from "../assets/alpheric-a1.jpeg"
 import asset_1 from "../assets/Homeicons/asset-1.png"
@@ -63,10 +63,10 @@ const HomePage = () => {
                             <div className="flex gap-6 font-urbanist">
                                 <p className="text-[20px] text-gray-600">You'll Be Talking With Our Creative Talents:</p>
                                 <div className="flex space-x-2">
-                                    <div className="w-[32px] h-[32px] border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1}/></div>
-                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_2}/></div>
-                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_3}/></div>
-                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_4}/></div>
+                                    <div className="w-[32px] h-[32px] border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1} /></div>
+                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_2} /></div>
+                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_3} /></div>
+                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_4} /></div>
                                 </div>
                                 <p className="text-[20px] text-gray-600 max-w-md">
                                     Let's Craft A Digital Strategy Powered By
@@ -92,12 +92,12 @@ const HomePage = () => {
                         </div>
 
                         {/* Spiral Image */}
-                        <div className= "relative">
+                        <div className="relative">
                             <div className="w-[900px] mx-auto h-[690px] absolute right-[-260px] top-[-400px]">
                                 <img src={Spiral} />
                             </div>
                             {isShowingPanel && (
-                                <div className="fixed bottom-18 right-8 bg-slate-900 text-white rounded-4xl w-70 z-55">
+                                <div className="fixed bottom-25 right-8 bg-slate-900 text-white rounded-4xl w-70 z-55">
                                     <div className="relative">
                                         <video
                                             // src={sample}
@@ -117,16 +117,23 @@ const HomePage = () => {
                                             <X />
                                         </button>
 
-                                        
+
                                         <button
                                             onClick={handleVolumeToggle}
                                             className="absolute top-4 left-4 bg-white p-2 rounded-xl text-black z-10 hover:bg-black hover:text-white"
                                         >
                                             {isMuted ? <VolumeOff /> : <Volume2 />}
                                         </button>
-                                        
 
-                                        <button className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-40 h-14 bg-black text-white font-medium rounded-full py-2 text-xl hover:bg-white transition hover:text-black">
+
+                                        <button
+                                            onClick={() => {
+                                                window.scrollTo({
+                                                    top: document.documentElement.scrollHeight || document.body.scrollHeight,
+                                                    behavior: "smooth"
+                                                });
+                                            }}
+                                            className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-40 h-14 bg-black text-white font-medium rounded-full py-2 text-xl hover:bg-white transition hover:text-black">
                                             Let's Talk 👋
                                         </button>
                                     </div>

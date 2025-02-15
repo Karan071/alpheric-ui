@@ -1,6 +1,6 @@
 import React from "react";
 import SolutionCard from "../../Components/SolutionCard";
-import {Parallax, ParallaxLayer} from "@react-spring/parallax";
+
 // Images imports
 import Business from "../../assets/Solutions/Business.jpg";
 import Consult from "../../assets/Solutions/Consult.jpg";
@@ -64,7 +64,7 @@ const SolutionPage = () => {
             </div>
 
             <div>
-                <div className="relative space-y-12 px-4 overflow-hidden">
+                <div className="relative space-y-12 px-4">
                     {cardsData.map((card, index) => (
                         <div key={index}>
                             <SolutionCard {...card} />
