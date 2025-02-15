@@ -19,7 +19,6 @@ function App() {
       <Navbar />
       <div>
         <HomePage />
-        <Design />
         <Questionaire />
         <CustomerPage />
         <SolutionPage />

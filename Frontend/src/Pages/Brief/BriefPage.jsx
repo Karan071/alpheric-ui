@@ -25,7 +25,7 @@ const cardsData = [
         listItems: [
             "Budget",
             "Team Size",
-            "timeline"
+            "Timeline"
         ]
 
     },

@@ -21,7 +21,7 @@ const questions = [
     {
         id: 4,
         text: "The Heart of Enterprise Solutions",
-        subText: "Why it's All About People, Not Just Technology",
+        subText: "Why it’s All About People, Not Just Technology",
         type: "special"
     }
 ];
