@@ -1,4 +1,4 @@
-import './App.css'
+// Importing Pages
 import HomePage from './Pages/HomePage'
 import Navbar from './Layouts/Navbar'
 import Design from './Pages/Design'

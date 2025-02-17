@@ -67,7 +67,7 @@ const SolutionPage = () => {
             <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1.5 }}
                 className="h-screen flex flex-col font-instrument-sans justify-center items-center"
             >
                 <div className="flex align-center items-center text-[140px] text-center font-semibold">

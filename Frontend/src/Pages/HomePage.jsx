@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react"
 import Spiral from "../assets/Homepage/spiral.png"
 import asset from "../assets/Homepage/asset.png"
 
-import { X, VolumeOff, Volume2,ChevronLeft} from "lucide-react"
+import { X, VolumeOff, Volume2, ChevronLeft, ChevronRight} from "lucide-react"
 import reelPoster from "../assets/Homepage/reelPoster.png"
 // Icons for images 
 import asset_1 from "../assets/Homeicons/asset-1.png"
@@ -147,12 +147,11 @@ const HomePage = () => {
 
                             {/* Side button for Reel */}
                             <button 
-                            className="fixed bottom-25 -right-5 bg-white text-black rounded-4xl h-125 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
+                            className="fixed bottom-25 -right-5 bg-white text-black rounded-4xl h-40 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
                             onClick={() => setIsShowingPanel(true) }>
-                                <ChevronLeft />
+                                { isShowingPanel ? <ChevronRight /> : <ChevronLeft />}
                             </button>
                             
-
                         </div>
                     </div>
                 </div>

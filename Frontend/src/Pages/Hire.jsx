@@ -33,7 +33,7 @@ const Hire = () => {
 
     return (
         <section className="min-h-screen flex flex-col items-center justify-evenly px-[116px] py-10">
-            <h1 className="font-instrument-sans text-[64px]  w-full font-semibold ">Hire</h1>
+            <h1 className="font-instrument-sans text-[64px] w-full font-semibold ">Hire</h1>
             <div className="w-full">
                 <div 
                     className="relative overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing"

@@ -8,7 +8,7 @@ const textVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.9, ease: 'easeOut' }
+        transition: { duration: 1, ease: 'easeOut' }
     }
 };
 
@@ -76,7 +76,7 @@ const SolutionCard = ({ title, description, imageUrl, tags, scrollYProgress, ind
             </div>
 
             {/* Content Section - Animated text and tags */}
-            <div className="w-1/2 px-12">
+            <div className="w-1/2 px-10">
                 <motion.div
                     style={{
                         opacity: textOpacity,
@@ -85,12 +85,12 @@ const SolutionCard = ({ title, description, imageUrl, tags, scrollYProgress, ind
                     className="flex flex-col gap-6"
                 >
                     {/* Title */}
-                    <h2 className="font-instrument-sans font-semibold text-7xl leading-tight">
+                    <h2 className="font-instrument-sans font-semibold text-7xl leading-tight px-3">
                         {title}
                     </h2>
 
                     {/* Description */}
-                    <p className="font-instrument-sans text-3xl text-gray-600">
+                    <p className="font-instrument-sans text-3xl text-gray-600 px-3">
                         {description}
                     </p>
 
