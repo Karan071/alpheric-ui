@@ -1,16 +1,17 @@
 import { useRef, useState, useEffect } from "react"
-import Spiral from "../assets/spiral.png"
-import asset from "../assets/asset.png"
-import sample from "../assets/Videos/sample.mp4"
 
-import { X, VolumeOff, Volume2 } from "lucide-react"
-import reelPoster from "../assets/reelPoster.png"
-import alpheric_logo from "../assets/alpheric-a1.jpeg"
+import Spiral from "../assets/Homepage/spiral.png"
+import asset from "../assets/Homepage/asset.png"
+
+import { X, VolumeOff, Volume2,ChevronLeft} from "lucide-react"
+import reelPoster from "../assets/Homepage/reelPoster.png"
+// Icons for images 
 import asset_1 from "../assets/Homeicons/asset-1.png"
 import asset_2 from "../assets/Homeicons/asset-2.png"
 import asset_3 from "../assets/Homeicons/asset-3.png"
 import asset_4 from "../assets/Homeicons/asset-4.png"
-import alpheric_animation from "../assets/alpheric-gif.gif"
+// Spiral motion animation Alpheric
+import alpheric_animation from "../assets/Homepage/alpheric-gif.gif"
 
 // import playButton from "../assets/Videos/play.png"
 
@@ -25,9 +26,6 @@ const HomePage = () => {
             videoRef.current.autoplay = true;
             videoRef.current.playsInline = true;
             videoRef.current.play()
-                .catch(error => {
-                    console.log("Video autoplay failed:", error);
-                });
         }
     }, []);
 
@@ -102,6 +100,7 @@ const HomePage = () => {
                             <div className="w-[900px] mx-auto h-[690px] absolute right-[-260px] top-[-400px]">
                                 <img src={Spiral} />
                             </div>
+                            {/* Reel panel */}
                             {isShowingPanel && (
                                 <div className="fixed bottom-25 right-8 bg-slate-900 text-white rounded-4xl w-70 z-55">
                                     <div className="relative">
@@ -139,12 +138,20 @@ const HomePage = () => {
                                                     behavior: "smooth"
                                                 });
                                             }}
-                                            className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-40 h-14 bg-black text-white font-medium rounded-full py-2 text-xl hover:bg-white transition hover:text-black">
+                                            className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-40 h-14 bg-black text-white font-medium rounded-full py-2 text-xl hover:bg-white transition hover:text-black ">
                                             Let's Talk 👋
                                         </button>
                                     </div>
                                 </div>
                             )}
+
+                            {/* Side button for Reel */}
+                            <button 
+                            className="fixed bottom-25 -right-5 bg-white text-black rounded-4xl h-125 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
+                            onClick={() => setIsShowingPanel(true) }>
+                                <ChevronLeft />
+                            </button>
+                            
 
                         </div>
                     </div>

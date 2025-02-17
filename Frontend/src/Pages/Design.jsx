@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import videsectionImage from "../assets/design-asset-cropped.png"
+import videsectionImage from "../assets/Homepage/design-asset-cropped.png"
 import { useRef } from 'react'
 import { MoveRight } from 'lucide-react'
 import playButton from "../assets/Videos/play.png"

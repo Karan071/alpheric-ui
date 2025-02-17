@@ -26,7 +26,7 @@ export default function Customers() {
                     <h2 className="text-[84px] mb-16 font-poppins font-semibold">Customers</h2>
                     
                     {/* Vertical Scroll Progress Bar */}
-                    <div className="absolute left-5 top-[160px] h-[40vh] w-[3px] bg-gray-200/50">
+                    <div className="absolute left-5 top-[180px] h-[40vh] w-[4px] bg-gray-200/50">
                         <motion.div 
                             className="absolute h-full w-full bg-black" 
                             style={{ 
@@ -46,8 +46,8 @@ export default function Customers() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1 }}
                             >
-                                <p className="text-[32px] text-gray-700">
-                                    <span className="text-[18px] font-[500]">01 </span>Visibility &amp; Communication
+                                <p className="text-[32px] font-bold text-gray-700">
+                                    <span className="text-[18px] font-semibold">01 </span>Visibility &amp; Communication
                                 </p>
                                 <p className="text-[18px] pl-8 text-gray-500 mt-2">
                                     Take the assessment and get your career matches, personality archetype, and more along the way.
@@ -59,8 +59,8 @@ export default function Customers() {
                             className="absolute top-0 transition-opacity duration-500 ease-in-out"
                         >
                             <div>
-                                <p className="text-[32px] text-gray-700">
-                                    <span className="text-[18px] font-light">02 </span>Operational Prioritization
+                                <p className="text-[32px] text-gray-700 font-bold">
+                                    <span className="text-[18px] font-semibold">02 </span>Operational Prioritization
                                 </p>
                                 <p className="text-[18px] pl-8 text-gray-500 text-base mt-2">
                                     Find out what makes you stand apart from others and why certain careers are great fits for you.
@@ -72,8 +72,8 @@ export default function Customers() {
                             className="absolute top-0 transition-opacity duration-500 ease-in-out"
                         >
                             <div>
-                                <p className="text-[32px] text-gray-700">
-                                    <span className="text-[18px] font-light">03 </span>Justification &amp; Planning
+                                <p className="text-[32px] text-gray-700 font-bold ">
+                                    <span className="text-[18px] font-semibold">03 </span>Justification &amp; Planning
                                 </p>
                                 <p className=" text-[18px] pl-8 text-gray-500 text-base mt-2">
                                     Find all the information you need to know about your dream career. Then make a plan to get there.
@@ -85,7 +85,7 @@ export default function Customers() {
 
                 {/* Right Side - Sticky Animated Logos */}
                 <div
-                    className="w-1/2 h-[200vh] sticky top-0 flex items-center justify-center overflow-visible"
+                    className="w-1/2 h-[200vh] sticky top-0 flex items-center justify-center overflow-x-visible"
                     ref={ref}
                 >
                     <motion.div style={{ x: translateX }} className="relative w-[800px] top-60">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Alphericlogo from "../assets/alpheric-icon.png";
+import Alphericlogo from "../assets/Homepage/alpheric-icon.png";
 import {ChevronDown} from "lucide-react"
 
 const Navbar = () => {
