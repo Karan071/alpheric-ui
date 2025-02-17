@@ -1,5 +1,6 @@
 import React from "react";
 import SolutionCard from "../../Components/SolutionCard";
+// import {Parallax} from "@react-spring/parallax"
 
 // Images imports
 import Business from "../../assets/Solutions/Business.jpg";

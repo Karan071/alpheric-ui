@@ -56,7 +56,13 @@ const HomePage = () => {
 
 
                         <div className="space-y-8 mt-14">
-                            <button className="px-8 py-3 rounded-full border border-black text-lg hover:bg-[#56c8dc] hover:text-white">
+                            <button
+                                onClick={() => {
+                                    window.scrollTo({
+                                        top: document.documentElement.scrollHeight || document.body.scrollHeight,
+                                        behavior: "smooth"
+                                    });
+                                }} className="px-8 py-3 rounded-full border border-black text-lg hover:bg-[#56c8dc] hover:text-white">
                                 Let's Talk
                             </button>
 

@@ -24,7 +24,19 @@ export default function Customers() {
                 {/* Left Side */}
                 <div className="w-1/2 flex flex-col justify-start p-5 sticky top-14 h-[100vh]">
                     <h2 className="text-[84px] mb-16 font-poppins font-semibold">Customers</h2>
-                    <ul className="text-lg space-y-40 relative h-full">
+                    
+                    {/* Vertical Scroll Progress Bar */}
+                    <div className="absolute left-5 top-[160px] h-[40vh] w-[3px] bg-gray-200/50">
+                        <motion.div 
+                            className="absolute h-full w-full bg-black" 
+                            style={{ 
+                                scaleY: useTransform(scrollYProgress, [0, 0.9], [0, 1]),
+                                originY: 0
+                            }}
+                        />
+                    </div>
+
+                    <ul className="text-lg space-y-40 relative h-full pl-12">
                         <motion.div
                             style={{ opacity: opacity1, y: y1 }}
                             className="absolute top-0 flex flex-col gap-2 transition-opacity duration-1000 ease-in-out"

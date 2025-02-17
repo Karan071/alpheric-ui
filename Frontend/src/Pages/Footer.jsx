@@ -9,9 +9,9 @@ const Footer = () => {
                 
                 <div className="space-y-6 text-4xl gap-4">
                     <div>
-                        <h3 className="mb-4">Say Hello 👋</h3>
+                        <h3 className="mb-4 font-semibold">Say Hello 👋</h3>
                         <div className="space-y-2">
-                            <p><a href="">LinkedIn</a></p>
+                            <p><a href="https://www.linkedin.com/company/alphericconsultants/" target="_blank">LinkedIn</a></p>
                             <p><a href="https://www.instagram.com/alpheric.consultants/" target='_blank'>Instagram</a></p>
                             <p><a href="">Dribbble</a></p>
                             <p><a href="">Behance</a></p>
@@ -22,7 +22,7 @@ const Footer = () => {
                 
                 <div className="space-y-6 text-4xl">
                     <div>
-                        <h3 className="mb-4">Consult</h3>
+                        <h3 className="mb-4 font-semibold">Consult</h3>
                         <div className="space-y-2">
                             <p>Design</p>
                             <p>Build</p>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
 
                 
-                <div className="space-y-6 text-4xl">
+                <div className="space-y-6 text-4xl font-semibold">
                     <div>
                         <h3 className="mb-4">About Us</h3>
                         <div className="space-y-2">
@@ -49,8 +49,8 @@ const Footer = () => {
             
             <div className="border-t pt-8">
                 <div className="mb-8">
-                    <p className="text-gray-600 mb-4">For whose daily routines involve PDF presentations</p>
-                    <button className="flex items-center gap-2 text-black">
+                    <p className="text-gray-600 mb-4 text-[22px]">For whose daily routines involve PDF presentations</p>
+                    <button className="flex items-center gap-2 text-black ">
                         Download & Share PDF ☺️ <Download className="ml-1" />
                     </button>
                 </div>
