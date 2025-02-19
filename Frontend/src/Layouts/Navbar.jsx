@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-2 bg-transparent backdrop-blur-md border border-white/30 z-50">
             <div className='relative z-10'>
-                <img src={Alphericlogo} alt="logo" className='w-[192px] h-auto ' />
+                <img src={Alphericlogo} alt="logo" className='w-[200px] h-auto' />
             </div>
 
             <div className="flex items-center gap-6 border border-white rounded-full px-4 py-2 text-lg bg-white/10 backdrop-blur-lg mx-5">
@@ -25,7 +25,7 @@ const Navbar = () => {
                 <a href="#action" onClick={() => setActiveNav()}>Action</a>
                 <a href="#insights" onClick={() => setActiveNav()}>Insights</a>
             </div>
-            <button className="px-4 py-2 text-xl rounded-3xl border border-black hover:bg-[#56c8dc] hover:text-white bg-white">
+            <button className="px-6 py-4 text-xl rounded-[73px] hover:bg-[#56c8dc] hover:text-white bg-white">
                 Sign Up
             </button>
         </div>

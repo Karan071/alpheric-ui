@@ -52,7 +52,9 @@
 // export default Pilotpage;
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import PilotSection from "../../Components/PilotCards"
+
 import pilot1 from '../../assets/Pilot_assets/pilot_asset_1.jpeg'
 import pilot2 from '../../assets/Pilot_assets/pilot_asset_2.jpeg'
 import pilot3 from '../../assets/Pilot_assets/pilot_asset_3.png'

@@ -4,13 +4,13 @@ const date = new Date();
 
 const Footer = () => {
     return (
-        <footer className=" container mx-auto px-6 py-12 font-urbanist mt-20">
+        <footer className=" container mx-auto px-6 py-12 font-urbanist">
             <div className="grid grid-cols-3 gap-20 mb-20">
                 
                 <div className="space-y-6 text-4xl gap-4">
                     <div>
-                        <h3 className="mb-4 font-semibold">Say Hello 👋</h3>
-                        <div className="space-y-2">
+                        <h3 className="mb-2 font-semibold">Say Hello 👋</h3>
+                        <div className="space-y-7 mt-6">
                             <p><a href="https://www.linkedin.com/company/alphericconsultants/" target="_blank">LinkedIn</a></p>
                             <p><a href="https://www.instagram.com/alpheric.consultants/" target='_blank'>Instagram</a></p>
                             <p><a href="">Dribbble</a></p>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <div className="space-y-6 text-4xl">
                     <div>
                         <h3 className="mb-4 font-semibold">Consult</h3>
-                        <div className="space-y-2">
+                        <div className="space-y-5">
                             <p>Design</p>
                             <p>Build</p>
                             <p>Host</p>
@@ -37,7 +37,7 @@ const Footer = () => {
                 <div className="space-y-6 text-4xl font-semibold">
                     <div>
                         <h3 className="mb-4">About Us</h3>
-                        <div className="space-y-2">
+                        <div className="space-y-5">
                             <p>Career</p>
                             <p>Actions</p>
                             <p>Insights</p>

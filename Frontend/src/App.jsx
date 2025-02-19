@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Fab/>
+      <Fab/>  
       <div>
         <HomePage />
         <Design/>

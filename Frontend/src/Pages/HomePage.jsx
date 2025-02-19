@@ -10,6 +10,8 @@ import asset_1 from "../assets/Homeicons/asset-1.png"
 import asset_2 from "../assets/Homeicons/asset-2.png"
 import asset_3 from "../assets/Homeicons/asset-3.png"
 import asset_4 from "../assets/Homeicons/asset-4.png"
+import asset_5 from "../assets/Homeicons/asset-5.png"
+
 // Spiral motion animation Alpheric
 import alpheric_animation from "../assets/Homepage/alpheric-gif.gif"
 
@@ -64,17 +66,18 @@ const HomePage = () => {
                                 Let's Talk
                             </button>
 
-                            <div className="flex gap-6 font-urbanist">
-                                <p className="text-[20px] text-gray-600">You'll Be Talking With Our Creative Talents:</p>
+                            <div className="flex justify-between items-center font-urbanist">
+                                <p className="text-[20px] text-gray-600">You'll Be Talking With<br />Our Creative Talents:</p>
                                 <div className="flex space-x-2">
-                                    <div className="w-[32px] h-[32px] border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1} /></div>
-                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_2} /></div>
-                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_3} /></div>
-                                    <div className="w-[32px] h-[32px] border-white bg-gray-200 shadow-lg"><img src={asset_4} /></div>
+                                    <div className="w-[36px] h-[36px] border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1} /></div>
+                                    <div className="w-[36px] h-[36px]  border-white bg-gray-200 shadow-lg"><img src={asset_2} /></div>
+                                    <div className="w-[36px] h-[36px] border-white bg-gray-200 shadow-lg"><img src={asset_3} /></div>
+                                    <div className="w-[36px] h-[36px] border-white bg-gray-200 shadow-lg"><img src={asset_4} /></div>
+                                    <div className="w-[36px] h-[36px] border-white bg-gray-200 shadow-lg"><img src={asset_5} /></div>
                                 </div>
                                 <p className="text-[20px] text-gray-600 max-w-md">
-                                    Let's Craft A Digital Strategy Powered By
-                                    Award-Winning Tech To Drive Real Results And
+                                    Let's Craft A Digital Strategy Powered By <br/>
+                                    Award-Winning Tech To Drive Real Results And <br/>
                                     Grow Your Business — Together!  🚀
                                 </p>
                             </div>
@@ -85,10 +88,10 @@ const HomePage = () => {
                     {/* Right Section */}
                     <div className="md:w-1/2 relative h-full flex items-center justify-end">
                         {/* Circular Logo */}
-                        <div className="absolute left-10 bottom-50 ">
-                            <div className="relative w-34 h-34">
+                        <div className="absolute left-12 bottom-30 ">
+                            <div className="relative w-45 h-45">
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-30 h-30 rounded-full flex items-center justify-center ">
+                                    <div className="w-45 h-45 rounded-full flex items-center justify-center ">
                                         <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
@@ -97,7 +100,7 @@ const HomePage = () => {
 
                         {/* Spiral Image */}
                         <div className="relative">
-                            <div className="w-[900px] mx-auto h-[690px] absolute right-[-260px] top-[-400px]">
+                            <div className="w-[900px] mx-auto h-[690px] absolute right-[-240px] top-[-400px]">
                                 <img src={Spiral} />
                             </div>
                             {/* Reel panel */}
