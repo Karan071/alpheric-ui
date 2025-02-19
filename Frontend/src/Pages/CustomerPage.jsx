@@ -11,40 +11,40 @@ export default function Customers() {
     const translateX = useTransform(scrollYProgress, [0, 3], [0, 600]);
 
     const opacity1 = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
-    const opacity2 = useTransform(scrollYProgress, [0.2, 0.45, 0.7], [0, 1, 0]);
+    const opacity2 = useTransform(scrollYProgress, [0.26, 0.45, 0.7], [0, 1, 0]);
     const opacity3 = useTransform(scrollYProgress, [0.5, 0.9], [0, 0.9]);
 
-    const y1 = useTransform(scrollYProgress, [0, 0.3], [0, -250]);
-    const y2 = useTransform(scrollYProgress, [0.25, 0.55], [250, 0]);
-    const y3 = useTransform(scrollYProgress, [0.5, 0.8], [250, 0]);
+    const y1 = useTransform(scrollYProgress, [0, 0.6], [0, -250]);
+    const y2 = useTransform(scrollYProgress, [0.3, 0.8], [250, 0]);
+    const y3 = useTransform(scrollYProgress, [0.8, 1], [300, 0]);
 
     return (
         <section className="relative w-full h-[300vh] flex items-center justify-center bg-white">
             <div className="w-full max-w-7xl flex">
                 {/* Left Side */}
-                <div className="w-1/2 flex flex-col justify-start p-5 sticky top-14 h-[100vh]">
+                <div className="w-1/2 flex flex-col justify-start sticky top-20 h-[100vh]">
                     <h2 className="text-[84px] mb-16 font-poppins font-semibold">Customers</h2>
                     
                     {/* Vertical Scroll Progress Bar */}
-                    <div className="absolute left-5 top-[180px] h-[40vh] w-[4px] bg-gray-200/50">
+                    <div className="absolute left-5 top-[180px] h-[30vh] w-[4px] bg-gray-200/50">
                         <motion.div 
                             className="absolute h-full w-full bg-black" 
                             style={{ 
-                                scaleY: useTransform(scrollYProgress, [0, 0.9], [0, 1]),
+                                scaleY: useTransform(scrollYProgress, [0, 0.9], [0, 1], [0, 1]),
                                 originY: 0
                             }}
                         />
                     </div>
 
-                    <ul className="text-lg space-y-40 relative h-full pl-12">
+                    <ul className="text-lg space-y-60 relative h-full pl-12">
                         <motion.div
                             style={{ opacity: opacity1, y: y1 }}
-                            className="absolute top-0 flex flex-col gap-2 transition-opacity duration-1000 ease-in-out"
+                            className="absolute top-5 flex flex-col gap-2 transition-opacity duration-1000 ease-in-out"
                         >
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1 }}
+                                transition={{ duration: 1.5 }}
                             >
                                 <p className="text-[32px] font-bold text-gray-700">
                                     <span className="text-[18px] font-semibold">01 </span>Visibility &amp; Communication
@@ -95,21 +95,21 @@ export default function Customers() {
                             <div className="w-2 h-2 bg-white rounded-full" />
                             <motion.div className="w-28 h-28 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
                                 <img
-                                    src="./src/assets/Customer-icons/Gucci.png"
+                                    src="Frontend/src/assets/Customer-icons/Gucci.png"
                                     alt="Gucci"
                                     className="w-20 h-20 object-contain"
                                 />
                             </motion.div>
                             <motion.div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
                                 <img
-                                    src="/src/assets/Customer-icons/coca-cola.png"
+                                    src="./src/assets/Customer-icons/coca-cola.png"
                                     alt="coca-cola"
                                     className="w-16 h-16 object-contain"
                                 />
                             </motion.div>
                             <motion.div className="w-20 h-20 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
                                 <img
-                                    src="/src/assets/Customer-icons/Rolex.png"
+                                    src="./src/assets/Customer-icons/Rolex.png"
                                     alt="Rolex"
                                     className="w-10 h-10 object-contain"
                                 />
@@ -125,7 +125,7 @@ export default function Customers() {
                             <div className="w-7 h-7 bg-white rounded-full" />
                             <motion.div className="w-28 h-28 bg-white rounded-full shadow-sm flex items-center justify-center p-4">
                                 <img
-                                    src="/src/assets/Customer-icons/hm.png"
+                                    src="Frontend/src/assets/Customer-icons/Hm.png"
                                     alt="H&M"
                                     className="w-20 h-20 object-contain"
                                 />

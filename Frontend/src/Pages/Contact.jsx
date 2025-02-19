@@ -10,7 +10,7 @@ const Contact = () => {
 
                 className='w-full max-w-4xl font-instrument-sans leading-tight'>
                 <h3 className='text-[40px]'>Shall we chat?</h3>
-                <h1 className='text-[64px] font-bold mb-30 hover:underline underline-offset-8 decoration-3 '>hello@alpheric.com</h1>
+                <h1 className='text-[64px] font-bold mb-30 hover:underline underline-offset-8 decoration-3 transition'>hello@alpheric.com</h1>
                 <div className='flex items-center hover:underline underline-offset-8 decoration-4 font-semibold mb-30 gap-3'>
                     <span className='text-[140px]'>Let’s</span>
                     <motion.p

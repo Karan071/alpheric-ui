@@ -120,14 +120,9 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                 opacity: { duration: 0.2 },
             }}
             className="relative w-full max-w-[691px] font-instrument-sans flex justify-center items-center">
-                {/* dummy card */}
-                {/* <div className="fixed top-7 w-[581px] h-[289px] bg-gray-600 rounded-[24px] shadow-sm overflow-hidden gap-8"></div>
-                <div className="fixed top-5 w-[601px] h-[289px] bg-gray-400 rounded-[24px] shadow-sm overflow-hidden gap-8"></div>
-                <div className="fixed top-3 w-[621px] h-[289px] bg-gray-300 rounded-[24px] shadow-sm overflow-hidden gap-8"></div>
-                 */}
-                
+
             {/* Main Card */}
-            <div className="relative border border-gray-300 bg-white w-[671px] h-[289px] p-4 rounded-[24px] shadow-sm overflow-hidden gap-8 hover:scale-105 transition-transform duration-300 font-instrument-sans">
+            <div className="relative border border-gray-300 bg-white w-[671px] h-[289px] p-4 rounded-[24px] shadow-sm overflow-hidden gap-8  font-instrument-sans">
                 {question.type !== "special" ? (
                     <>
                         {/* Step Indicators */}
@@ -156,13 +151,13 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                         <div className="flex justify-between">
                             <button
                                 onClick={() => onAnswer("no")}
-                                className="absolute -left-2 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium hover:bg-[#56c8dc] shadow-lg font-instrument-sans"
+                                className="absolute -left-2 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium hover:bg-[#56c8dc] shadow-lg font-instrument-sans transition duration-500"
                             >
                                 No
                             </button>
                             <button
                                 onClick={() => onAnswer("yes")}
-                                className="absolute -right-3 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium hover:bg-[#56c8dc] shadow-lg font-instrument-sans"
+                                className="absolute -right-3 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium hover:bg-[#56c8dc] shadow-lg font-instrument-sans transition duration-500"
                             >
                                 Yes
                             </button>
@@ -178,7 +173,7 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                         </h2>
                         <button
                             onClick={() => onAnswer("view")}
-                            className="bg-black text-white text-[24px] px-4 py-6 rounded-full hover:bg-[#56c8dc] transition-colors absolute -bottom-7 -translate-x-1/2 shadow-lg"
+                            className="bg-black text-white text-[24px] px-4 py-6 rounded-full hover:bg-[#56c8dc] transition-colors absolute -bottom-7 -translate-x-1/2 shadow-lg duration-600"
                         >
                             View
                         </button>

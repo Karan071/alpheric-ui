@@ -1,60 +1,53 @@
 // import { motion, useTransform } from 'framer-motion';
 
 // const BriefCard = ({ title, description, imageUrl, listItems, scrollYProgress, index }) => {
-//     // Image fade animation
 //     const imageOpacity = useTransform(
 //         scrollYProgress,
 //         [
-//             index * 0.33,
-//             index * 0.33 + 0.05,
-//             (index + 1) * 0.33 - 0.05,
-//             (index + 1) * 0.33
+//             index * 0.4,
+//             index * 0.4 + 0.15,
+//             (index + 1) * 0.4 - 0.15, 
+//             (index + 1) * 0.4
 //         ],
 //         [0, 1, 1, 0]
 //     );
 
-//     // Text slide-up animations with different timings for each element
 //     const titleY = useTransform(
 //         scrollYProgress,
-//         [index * 0.33, (index + 1) * 0.33],
-//         [100, -50]
+//         [index * 0.4, (index + 1) * 0.4],
+//         [120, -40]
 //     );
 
 //     const descriptionY = useTransform(
 //         scrollYProgress,
-//         [index * 0.33 + 0.05, (index + 1) * 0.33],
-//         [100, -30]
+//         [index * 0.4 + 0.15, (index + 1) * 0.4],
+//         [120, -30]
 //     );
 
 //     const listY = useTransform(
 //         scrollYProgress,
-//         [index * 0.33 + 0.1, (index + 1) * 0.33],
-//         [100, 0]
+//         [index * 0.4 + 0.2, (index + 1) * 0.4],
+//         [120, 0]
 //     );
 
-//     // Opacity animations
 //     const contentOpacity = useTransform(
 //         scrollYProgress,
 //         [
-//             index * 0.33,
-//             index * 0.33 + 0.05,
-//             (index + 1) * 0.33 - 0.05,
-//             (index + 1) * 0.33
+//             index * 0.4,
+//             index * 0.4 + 0.15,
+//             (index + 1) * 0.4 - 0.15,
+//             (index + 1) * 0.4
 //         ],
 //         [0, 1, 1, 0]
 //     );
 
 //     return (
 //         <div className="absolute inset-0 flex items-center">
-//             {/* Left Content Section with Staggered Animations */}
 //             <div className="w-1/2 px-12 relative overflow-visible">
 //                 <motion.div
-//                     style={{
-//                         opacity: contentOpacity,
-//                     }}
+//                     style={{ opacity: contentOpacity }}
 //                     className="relative"
 //                 >
-//                     {/* Title with its own motion */}
 //                     <motion.h1 
 //                         style={{ y: titleY }}
 //                         className="text-[96px] font-[600] font-instrument-sans mb-6 relative"
@@ -62,7 +55,6 @@
 //                         {title}
 //                     </motion.h1>
 
-//                     {/* Description with its own motion */}
 //                     <motion.p 
 //                         style={{ y: descriptionY }}
 //                         className="text-gray-600 text-[32px] max-w-xl font-urbanist mb-8 relative"
@@ -70,7 +62,6 @@
 //                         {description}
 //                     </motion.p>
 
-//                     {/* List Items with staggered animations */}
 //                     {listItems && listItems.length > 0 && (
 //                         <motion.ul 
 //                             style={{ y: listY }}
@@ -79,20 +70,23 @@
 //                             {listItems.map((item, itemIndex) => (
 //                                 <motion.li
 //                                     key={itemIndex}
-//                                     initial={{ opacity: 0, x: -20 }}
+//                                     initial={{ opacity: 0, x: -40 }}
 //                                     animate={{ opacity: 1, x: 0 }}
 //                                     transition={{ 
-//                                         delay: itemIndex * 0.1,
-//                                         duration: 0.5,
-//                                         ease: "easeOut"
+//                                         delay: itemIndex * 0.25,
+//                                         duration: 1.2,
+//                                         ease: "easeInOut"
 //                                     }}
 //                                     className="flex items-center"
 //                                 >
 //                                     <motion.span 
 //                                         className="mr-2 text-2xl"
 //                                         animate={{ scale: [1, 1.2, 1] }}
-//                                         transition={{ duration: 0.5, delay: itemIndex * 0.1 }}
-//                                         Making    >
+//                                         transition={{ 
+//                                             duration: 1.2, 
+//                                             delay: itemIndex * 0.25 
+//                                         }}
+//                                     >
 //                                         •
 //                                     </motion.span>
 //                                     {item}
@@ -103,7 +97,6 @@
 //                 </motion.div>
 //             </div>
 
-//             {/* Right Image Section*/}
 //             <div className="w-1/2 flex justify-center">
 //                 <motion.div
 //                     style={{ opacity: imageOpacity }}
@@ -112,18 +105,17 @@
 //                     <motion.img
 //                         src={imageUrl}
 //                         alt={title ? `${title} illustration` : 'Card illustration'}
-//                         className="w-full h-[600px] object-cover rounded-[36px] "
-//                         initial={{ scale: 0.95 }}
+//                         className="w-full h-[600px] object-cover rounded-[36px]"
+//                         initial={{ scale: 0.9 }}
 //                         animate={{ scale: 1 }}
-//                         transition={{ duration: 0.5 }}
+//                         transition={{ duration: 1.4 }}
 //                     />
-                    
-//                     {/* Optional decorative elements */}
+
 //                     <motion.div 
-//                         className="absolute inset-0 rounded-[36px] "
-//                         initial={{ scale: 0.9, opacity: 0 }}
+//                         className="absolute inset-0 rounded-[36px]"
+//                         initial={{ scale: 0.85, opacity: 0 }}
 //                         animate={{ scale: 1, opacity: 1 }}
-//                         transition={{ duration: 0.5, delay: 0.2 }}
+//                         transition={{ duration: 1.4, delay: 0.5 }}
 //                     />
 //                 </motion.div>
 //             </div>
@@ -133,125 +125,93 @@
 
 // export default BriefCard;
 
+import { motion, useTransform, useSpring } from "framer-motion";
 
-import { motion, useTransform } from 'framer-motion';
+const BriefCard = ({
+    title,
+    description,
+    imageUrl,
+    listItems,
+    scrollYProgress,
+    index,
+}) => {
 
-const BriefCard = ({ title, description, imageUrl, listItems, scrollYProgress, index }) => {
-    const imageOpacity = useTransform(
-        scrollYProgress,
-        [
-            index * 0.4,
-            index * 0.4 + 0.15,
-            (index + 1) * 0.4 - 0.15, 
-            (index + 1) * 0.4
-        ],
-        [0, 1, 1, 0]
-    );
+    const smoothScroll = useSpring(scrollYProgress, {
+        stiffness: 80,
+        damping: 20,
+        restDelta: 0.001,
+    });
 
-    const titleY = useTransform(
-        scrollYProgress,
+    // 2) Use the springed value instead of raw scrollYProgress
+    const textY = useTransform(
+        smoothScroll,
         [index * 0.4, (index + 1) * 0.4],
         [120, -40]
     );
 
-    const descriptionY = useTransform(
-        scrollYProgress,
-        [index * 0.4 + 0.15, (index + 1) * 0.4],
-        [120, -30]
-    );
-
-    const listY = useTransform(
-        scrollYProgress,
-        [index * 0.4 + 0.2, (index + 1) * 0.4],
-        [120, 0]
-    );
-
     const contentOpacity = useTransform(
-        scrollYProgress,
+        smoothScroll,
+        [index * 0.4, index * 0.4 + 0.1, (index + 1) * 0.4 - 0.1, (index + 1) * 0.4],
+        [0, 1, 1, 0]
+    );
+
+    const imageOpacity = useTransform(
+        smoothScroll,
         [
             index * 0.4,
             index * 0.4 + 0.15,
             (index + 1) * 0.4 - 0.15,
-            (index + 1) * 0.4
+            (index + 1) * 0.4,
         ],
         [0, 1, 1, 0]
     );
 
+
+    const baseTransition = {
+        duration: 2.5,
+        ease: "easeInOut",
+    };
+
     return (
         <div className="absolute inset-0 flex items-center">
+            {/* --- Left Text Section --- */}
             <div className="w-1/2 px-12 relative overflow-visible">
                 <motion.div
-                    style={{ opacity: contentOpacity }}
+                    style={{ opacity: contentOpacity, y: textY }}
+                    transition={baseTransition}
                     className="relative"
                 >
-                    <motion.h1 
-                        style={{ y: titleY }}
-                        className="text-[96px] font-[600] font-instrument-sans mb-6 relative"
-                    >
+                    <h1 className="text-[96px] font-[600] font-instrument-sans mb-6">
                         {title}
-                    </motion.h1>
-
-                    <motion.p 
-                        style={{ y: descriptionY }}
-                        className="text-gray-600 text-[32px] max-w-xl font-urbanist mb-8 relative"
-                    >
+                    </h1>
+                    <p className="text-gray-600 text-[32px] max-w-xl font-urbanist mb-8">
                         {description}
-                    </motion.p>
+                    </p>
 
                     {listItems && listItems.length > 0 && (
-                        <motion.ul 
-                            style={{ y: listY }}
-                            className="space-y-4 text-[32px] text-gray-600 font-urbanist relative"
-                        >
+                        <ul className="space-y-4 text-[32px] text-gray-600 font-urbanist">
                             {listItems.map((item, itemIndex) => (
-                                <motion.li
-                                    key={itemIndex}
-                                    initial={{ opacity: 0, x: -40 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ 
-                                        delay: itemIndex * 0.25,
-                                        duration: 1.2,
-                                        ease: "easeInOut"
-                                    }}
-                                    className="flex items-center"
-                                >
-                                    <motion.span 
-                                        className="mr-2 text-2xl"
-                                        animate={{ scale: [1, 1.2, 1] }}
-                                        transition={{ 
-                                            duration: 1.2, 
-                                            delay: itemIndex * 0.25 
-                                        }}
-                                    >
-                                        •
-                                    </motion.span>
+                                <li key={itemIndex} className="flex items-center">
+                                    <span className="mr-2 text-2xl">•</span>
                                     {item}
-                                </motion.li>
+                                </li>
                             ))}
-                        </motion.ul>
+                        </ul>
                     )}
                 </motion.div>
             </div>
 
+            {/* --- Right Image Section --- */}
             <div className="w-1/2 flex justify-center">
                 <motion.div
                     style={{ opacity: imageOpacity }}
-                    className="relative w-full max-w-[594px]"
+                    transition={baseTransition}
+                    className="relative w-full max-w-[520px]"
                 >
-                    <motion.img
+                    <img
                         src={imageUrl}
-                        alt={title ? `${title} illustration` : 'Card illustration'}
-                        className="w-full h-[600px] object-cover rounded-[36px]"
-                        initial={{ scale: 0.9 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 1.4 }}
-                    />
-                    
-                    <motion.div 
-                        className="absolute inset-0 rounded-[36px]"
-                        initial={{ scale: 0.85, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 1.4, delay: 0.5 }}
+                        alt={title ? `${title} illustration` : "Card illustration"}
+                        className="w-full h-[550px] object-cover rounded-[36px]"
                     />
                 </motion.div>
             </div>
