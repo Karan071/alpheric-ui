@@ -160,6 +160,7 @@ const cardsData = [
         tags: ["Digital Growth","Organic Marketing","Media Buying","Performance Marketing"]
     },
 ];
+const totalCards = cardsData.length;
 
 const SolutionPage = () => {
     const containerRef = useRef(null);
@@ -178,7 +179,7 @@ const SolutionPage = () => {
                 className="h-screen flex flex-col font-instrument-sans justify-center items-center"
             >
                 <div className="flex align-center items-center text-[140px] text-center font-semibold">
-                    What Are We Fighting Against?
+                    What Are We <br/> Fighting Against?
                 </div>
                 <div className="text-gray-500 text-[40px] text-center">
                     Users not engaging with your design or project
@@ -189,7 +190,7 @@ const SolutionPage = () => {
             </motion.div>
             
             {/* Sticky Scroll Section using SolutionCard */}
-            <div ref={containerRef} className="relative h-[400vh]">
+            <div ref={containerRef} className="relative h-[400vh] font-instrument-sans">
                 <div className="sticky top-0 h-screen flex items-center overflow-hidden">
                     <div className="relative w-full max-w-7xl mx-auto">
                         {cardsData.map((card, index) => (
@@ -201,6 +202,7 @@ const SolutionPage = () => {
                                 tags={card.tags}
                                 scrollYProgress={scrollYProgress}
                                 index={index}
+                                totalCards={totalCards}
                             />
                         ))}
                     </div>

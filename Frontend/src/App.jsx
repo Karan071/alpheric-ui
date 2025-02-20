@@ -25,8 +25,8 @@ function App() {
         <Questionaire />
         <CustomerPage />
         <SolutionPage />
-        <Pilotpage />
         <Vision />
+        <Pilotpage />
         <Next />
         <BriefPage/>
         <Hire />

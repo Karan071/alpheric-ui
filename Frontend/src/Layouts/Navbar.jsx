@@ -7,8 +7,8 @@ const Navbar = () => {
 
     return (
         <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-2 bg-transparent backdrop-blur-md border border-white/30 z-50">
-            <div className='relative z-10'>
-                <img src={Alphericlogo} alt="logo" className='w-[200px] h-auto' />
+            <div className='relative z-10 right-12'>
+                <img src={Alphericlogo} alt="logo" className='w-[200px] h-auto ' />
             </div>
 
             <div className="flex items-center gap-6 border border-white rounded-full px-4 py-2 text-lg bg-white/10 backdrop-blur-lg mx-5">

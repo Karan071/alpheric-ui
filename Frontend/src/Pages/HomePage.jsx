@@ -45,12 +45,12 @@ const HomePage = () => {
     };
 
     return (
-        <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#F5F0FF] overflow-clip">
+        <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#EDE9FE] overflow-clip">
             <div className="w-full my-5 px-[116px] h-screen flex items-center">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
                     {/* Left Section */}
                     <div className="h-full flex flex-col justify-center">
-                        <div className="flex items-center gap-2 mb-2">
+                        <div className="flex items-center gap-2">
                             <img src={asset} alt="Image asset" />
                         </div>
 
@@ -67,13 +67,15 @@ const HomePage = () => {
                             </button>
 
                             <div className="flex justify-between items-center font-urbanist">
-                                <p className="text-[20px] text-gray-600">You'll Be Talking With<br />Our Creative Talents:</p>
-                                <div className="flex space-x-2">
-                                    <div className="w-[36px] h-[36px] border-2 border-white bg-gray-200 shadow-lg"><img src={asset_1} /></div>
-                                    <div className="w-[36px] h-[36px]  border-white bg-gray-200 shadow-lg"><img src={asset_2} /></div>
-                                    <div className="w-[36px] h-[36px] border-white bg-gray-200 shadow-lg"><img src={asset_3} /></div>
-                                    <div className="w-[36px] h-[36px] border-white bg-gray-200 shadow-lg"><img src={asset_4} /></div>
-                                    <div className="w-[36px] h-[36px] border-white bg-gray-200 shadow-lg"><img src={asset_5} /></div>
+                                <div className="flex justify-self-end items-center gap-5">
+                                <p className="text-[20px] text-gray-600">You'll Be Talking With<br />Our Creative Talents.</p>
+                                <div className="flex space-x-1">
+                                    <div className="w-[36px] h-[36px] "><img src={asset_1} /></div>
+                                    <div className="w-[36px] h-[36px]"><img src={asset_2} /></div>
+                                    <div className="w-[36px] h-[36px]  "><img src={asset_3} /></div>
+                                    <div className="w-[36px] h-[36px]  "><img src={asset_4} /></div>
+                                    <div className="w-[36px] h-[36px]  "><img src={asset_5} /></div>
+                                </div>
                                 </div>
                                 <p className="text-[20px] text-gray-600 max-w-md">
                                     Let's Craft A Digital Strategy Powered By <br/>
@@ -88,10 +90,10 @@ const HomePage = () => {
                     {/* Right Section */}
                     <div className="md:w-1/2 relative h-full flex items-center justify-end">
                         {/* Circular Logo */}
-                        <div className="absolute left-12 bottom-30 ">
-                            <div className="relative w-45 h-45">
+                        <div className="absolute left-27 bottom-43 ">
+                            <div className="relative w-40 h-40">
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-45 h-45 rounded-full flex items-center justify-center ">
+                                    <div className="w-40 h-40 rounded-full flex items-center justify-center ">
                                         <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
