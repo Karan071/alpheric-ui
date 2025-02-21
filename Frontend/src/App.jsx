@@ -13,8 +13,6 @@ import Pilotpage from './Pages/Pilot/PilotPage'
 import SolutionPage from './Pages/Solutions/SolutionPage'
 import BriefPage from './Pages/Brief/BriefPage'
 import Fab from "./Components/Fab"
-import TickerLogo from './Components/TickerLogo'
-import Customer from './Pages/Customer'
 
 function App() {
   return (
@@ -34,7 +32,6 @@ function App() {
         <Hire />
         <Contact />
         <Footer />
-        <Customer/>
       </div>
     </>
   )

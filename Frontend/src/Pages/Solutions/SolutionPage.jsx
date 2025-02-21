@@ -59,7 +59,7 @@ const SolutionPage = () => {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start start", "end end"]
+        offset: ["start end", "end end"]
     });
 
     const totalCards = cardsData.length;

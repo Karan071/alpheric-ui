@@ -23,7 +23,10 @@ const HomePage = () => {
             videoRef.current.muted = true;
             videoRef.current.autoplay = true;
             videoRef.current.playsInline = true;
-            videoRef.current.play()
+            videoRef.current.loop = true;
+            videoRef.current.play().catch(error => {
+                console.error("Error attempting to play:", error);
+            });
         }
     }, []);
 
@@ -58,7 +61,7 @@ const HomePage = () => {
                                         top: document.documentElement.scrollHeight || document.body.scrollHeight,
                                         behavior: "smooth"
                                     });
-                                }} className="px-8 py-3 rounded-full border border-black text-lg hover:bg-[#56c8dc] hover:text-white">
+                                }} className="px-8 py-3 rounded-full border border-black text-lg hover:bg-[#56c8dc] hover:text-white ">
                                 Let's Talk
                             </button>
 
@@ -100,14 +103,12 @@ const HomePage = () => {
                             </div>
                             
                             {isShowingPanel && (
-                                <div className="fixed bottom-25 right-8 bg-slate-900 text-white rounded-4xl w-70 z-55">
+                                <div className="fixed bottom-25 right-8 bg-slate-900 text-white rounded-4xl h-[409px] w-[230px] z-55">
                                     <div className="relative">
                                         <video
-                                            // src={sample}
                                             src="https://rondesignlab.com/video/common/intercom.mp4"
                                             className="w-full object-cover rounded-4xl"
                                             ref={videoRef}
-                                            id="videoPlayer"
                                             poster={reelPoster}
                                             autoPlay
                                             playsInline
@@ -115,17 +116,19 @@ const HomePage = () => {
                                         />
                                         <button
                                             onClick={() => setIsShowingPanel(false)}
-                                            className="absolute top-4 right-4 bg-white p-2 rounded-xl text-black z-10 hover:bg-black hover:text-white "
+                                            className="absolute top-4 right-4 bg-white h-[32px] w-[32px] rounded-xl text-black z-10 hover:bg-black hover:text-white flex
+                                            justify-center items-center p-1"
                                         >
-                                            <X />
+                                            <X size={25} />
                                         </button>
 
 
                                         <button
                                             onClick={handleVolumeToggle}
-                                            className="absolute top-4 left-4 bg-white p-2 rounded-xl text-black z-10 hover:bg-black hover:text-white"
+                                            className="absolute top-4 left-4 bg-white h-[32px] w-[32px] rounded-xl text-black z-10 hover:bg-black hover:text-white flex
+                                            justify-center items-center p-1"
                                         >
-                                            {isMuted ? <VolumeOff /> : <Volume2 />}
+                                            {isMuted ? <VolumeOff size={25} /> : <Volume2 size={25} />}
                                         </button>
 
 
@@ -136,7 +139,7 @@ const HomePage = () => {
                                                     behavior: "smooth"
                                                 });
                                             }}
-                                            className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-40 h-14 bg-black text-white font-medium rounded-full py-2 text-xl hover:bg-white transition hover:text-black ">
+                                            className="absolute bottom-5 left-1/2 transform -translate-x-1/2 w-[173px] h-[46px] bg-black text-white font-medium rounded-[63px] py-2 text-xl hover:bg-white transition hover:text-black ">
                                             Let's Talk 👋
                                         </button>
                                     </div>
@@ -145,7 +148,7 @@ const HomePage = () => {
 
                             
                             <button 
-                            className="fixed bottom-25 -right-5 bg-white text-black rounded-4xl h-40 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
+                            className=" fixed bottom-25 -right-5 bg-white text-black rounded-4xl h-40 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
                             onClick={() => setIsShowingPanel(true) }>
                                 { isShowingPanel ? <ChevronRight /> : <ChevronLeft />}
                             </button>
