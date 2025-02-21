@@ -1,21 +1,17 @@
 import { useRef, useState, useEffect } from "react"
-
 import Spiral from "../assets/Homepage/spiral.png"
 import asset from "../assets/Homepage/asset.png"
-
 import { X, VolumeOff, Volume2, ChevronLeft, ChevronRight} from "lucide-react"
 import reelPoster from "../assets/Homepage/reelPoster.png"
-// Icons for images 
+
 import asset_1 from "../assets/Homeicons/asset-1.png"
 import asset_2 from "../assets/Homeicons/asset-2.png"
 import asset_3 from "../assets/Homeicons/asset-3.png"
 import asset_4 from "../assets/Homeicons/asset-4.png"
 import asset_5 from "../assets/Homeicons/asset-5.png"
 
-// Spiral motion animation Alpheric
 import alpheric_animation from "../assets/Homepage/alpheric-gif.gif"
 
-// import playButton from "../assets/Videos/play.png"
 
 const HomePage = () => {
     const videoRef = useRef(null);
@@ -45,10 +41,10 @@ const HomePage = () => {
     };
 
     return (
-        <section id="#" className="min-h-screen w-full bg-gradient-to-br from-white to-[#EDE9FE] overflow-clip">
+        <section id="#" className="min-h-screen w-full bg-[radial-gradient(ellipse_50%_100%_at_top_right,#EDE6FE_10%,#FFFFFF_100%)] overflow-clip">
             <div className="w-full my-5 px-[116px] h-screen flex items-center">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full">
-                    {/* Left Section */}
+                    
                     <div className="h-full flex flex-col justify-center">
                         <div className="flex items-center gap-2">
                             <img src={asset} alt="Image asset" />
@@ -67,7 +63,7 @@ const HomePage = () => {
                             </button>
 
                             <div className="flex justify-between items-center font-urbanist">
-                                <div className="flex justify-self-end items-center gap-5">
+                                <div className="flex justify-self-end items-center  gap-5">
                                 <p className="text-[20px] text-gray-600">You'll Be Talking With<br />Our Creative Talents.</p>
                                 <div className="flex space-x-1">
                                     <div className="w-[36px] h-[36px] "><img src={asset_1} /></div>
@@ -87,9 +83,8 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    {/* Right Section */}
+                    
                     <div className="md:w-1/2 relative h-full flex items-center justify-end">
-                        {/* Circular Logo */}
                         <div className="absolute left-27 bottom-43 ">
                             <div className="relative w-40 h-40">
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -99,13 +94,11 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Spiral Image */}
                         <div className="relative">
                             <div className="w-[900px] mx-auto h-[690px] absolute right-[-240px] top-[-400px]">
                                 <img src={Spiral} />
                             </div>
-                            {/* Reel panel */}
+                            
                             {isShowingPanel && (
                                 <div className="fixed bottom-25 right-8 bg-slate-900 text-white rounded-4xl w-70 z-55">
                                     <div className="relative">
@@ -150,7 +143,7 @@ const HomePage = () => {
                                 </div>
                             )}
 
-                            {/* Side button for Reel */}
+                            
                             <button 
                             className="fixed bottom-25 -right-5 bg-white text-black rounded-4xl h-40 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
                             onClick={() => setIsShowingPanel(true) }>

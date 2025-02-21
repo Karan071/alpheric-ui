@@ -20,11 +20,6 @@
     font-style: italic;
 }
 
-/* Sample usage for the fonts */
-/*  
-    <p class="font-[var(--font-urbanist)]">Urbanist Regular</p>
-    <p class="font-[var(--font-urbanist)] italic">Urbanist Italic</p>
- */
 
 /* Hiding the scroll bar in Carosel */
 @layer utilities {
@@ -50,11 +45,3 @@
 
 }
 
-@keyframes marquee {
-    from { startOffset: 0% }
-    to { startOffset: 100% }
-}
-
-.animate-marquee {
-    animation: marquee 10s linear infinite;
-}

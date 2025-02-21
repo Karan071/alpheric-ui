@@ -17,7 +17,7 @@ const Contact = () => {
                         initial={{ clipPath: 'inset(0 100% 0 0)' }}
                         whileInView={{
                             clipPath: 'inset(0 0 0 0)',
-                            transition: { duration: 1, ease: 'easeInOut', type: "tween" }
+                            transition: { duration: 1.2, ease: 'easeInOut', type: "tween" }
                         }}
                         viewport={{ once: true }}
                         className="overflow-hidden"
@@ -30,7 +30,7 @@ const Contact = () => {
                             x: 0,
                             transition: { 
                                 delay: 0.5, 
-                                duration: 1,
+                                duration: 1.5,
                                 type: 'smooth', 
                                 stiffness: 100 
                             }

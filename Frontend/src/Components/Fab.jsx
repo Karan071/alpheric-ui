@@ -12,7 +12,7 @@ const Fab = () => {
         <>
             <button
                 onClick={handleClick}
-                className="fixed bottom-2 right-8 m-3 p-3 bg-white rounded-full hover:bg-black hover:text-white z-50">
+                className="fixed bottom-2 right-8 m-3 p-3 bg-white rounded-full hover:bg-black hover:text-white z-50 shadow-2xl">
                 <ChevronUp size={40} />
             </button>
         </>

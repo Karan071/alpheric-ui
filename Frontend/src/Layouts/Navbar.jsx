@@ -6,7 +6,7 @@ const Navbar = () => {
     const [activeNav, setActiveNav] = useState("#");
 
     return (
-        <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-2 bg-transparent backdrop-blur-md border border-white/30 z-50">
+        <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-1 bg-transparent backdrop-blur-md border border-white/30 z-50">
             <div className='relative z-10 right-12'>
                 <img src={Alphericlogo} alt="logo" className='w-[200px] h-auto ' />
             </div>
