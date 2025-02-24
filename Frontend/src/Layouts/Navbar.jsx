@@ -6,12 +6,12 @@ const Navbar = () => {
     const [activeNav, setActiveNav] = useState("#");
 
     return (
-        <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-1 bg-transparent backdrop-blur-md border border-white/30 z-50">
+        <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-1 bg-transparent backdrop-blur-md z-50">
             <div className='relative z-10 right-12'>
-                <img src={Alphericlogo} alt="logo" className='w-[200px] h-auto ' />
+                <img src={Alphericlogo} alt="logo" className='w-[200px] h-[60px]' />
             </div>
 
-            <div className="flex items-center gap-6 border border-white rounded-full px-4 py-2 text-lg bg-white/10 backdrop-blur-lg mx-5">
+            <div className="flex items-center gap-6 border-1 border-white rounded-full px-4 py-2 text-lg  backdrop-blur-lg mx-5 leading-tighter">
                 <a className='flex items-center' href="#"  onClick={() => setActiveNav()}>Consult<ChevronDown size={15} /></a>
                 <a href="#about" onClick={() => setActiveNav()}>Build</a>
                 <a href="#design" onClick={() => setActiveNav()}>Design</a>
@@ -35,7 +35,7 @@ const Navbar = () => {
 export default Navbar;
 
 // import React, { useState } from 'react';
-// import Alphericlogo from "../assets/alpheric-icon.png";
+// import Alphericlogo from "../assets/Homepage/alpheric-icon.png";
 
 // const Navbar = () => {
 //     const [activeNav, setActiveNav] = useState("#");
@@ -57,9 +57,9 @@ export default Navbar;
 //     ];
 
 //     return (
-//         <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-2 bg-transparent backdrop-blur-md border border-white/30 z-50">
+//         <div className="fixed top-0 left-0 w-full flex justify-evenly font-urbanist px-6 py-4 m-1 bg-transparent backdrop-blur-md border border-[#5AC8DC] z-50">
 //             <div className='relative z-10'>
-//                 <img src={Alphericlogo} alt="logo" className='w-[192px] h-auto'/>
+//                 <img src={Alphericlogo} alt="logo" className='w-[px] h-auto'/>
 //             </div>
 
 //             <div className="flex gap-6 border border-white rounded-full px-4 py-2 text-lg bg-white/10 backdrop-blur-lg mx-5">

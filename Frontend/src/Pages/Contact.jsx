@@ -27,7 +27,7 @@ const Contact = () => {
                     />
                 </h1>
 
-                <div className="flex items-center gap-3 group hover:underline underline-offset-8 decoration-4 transition font-instrument-sans font-medium">
+                <div className="flex items-center gap-2 group hover:underline underline-offset-8 decoration-4 transition font-instrument-sans font-medium ">
                     <span className="text-[140px]">Let’s</span>
 
                     <motion.p
@@ -63,9 +63,9 @@ const Contact = () => {
                     >
                         talk
                     </motion.span>
-                    <button className="ml-4 px-6 py-2 rounded-full bg-transparent transition-colors duration-300 group-hover:bg-black">
+                    <button className="ml-4 px-8 py-2 rounded-full bg-transparent transition-colors duration-300 group-hover:bg-black">
                         <MoveRight
-                            size={90}
+                            size={100}
                             className="text-black transition-colors duration-300 group-hover:text-white"
                         />
                     </button>
