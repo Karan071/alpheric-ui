@@ -21,7 +21,6 @@ const PilotCards = ({
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>
 
-
             <div className="relative h-full flex items-center max-w-7xl mx-auto w-full">
                 <div className="max-w-xl">
                     <h1 className="text-5xl font-bold text-white mb-4">{title}</h1>
