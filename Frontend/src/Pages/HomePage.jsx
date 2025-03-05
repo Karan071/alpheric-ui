@@ -148,7 +148,7 @@ const HomePage = () => {
 
                             
                             <button 
-                            className=" fixed bottom-25 -right-5 bg-white text-black rounded-4xl h-40 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
+                            className=" fixed bottom-30 -right-5 bg-white text-black rounded-4xl h-20 w-10 z-55 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
                             onClick={() => setIsShowingPanel(true) }>
                                 { isShowingPanel ? <ChevronRight /> : <ChevronLeft />}
                             </button>

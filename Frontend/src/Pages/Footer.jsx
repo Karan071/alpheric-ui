@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className=" container mx-auto px-6 py-12 font-urbanist">
             <div className="grid grid-cols-3 gap-20 mb-20">
-                
+
                 <div className="space-y-6 text-4xl gap-4">
                     <div>
                         <h3 className="mb-2 font-semibold">Say Hello 👋</h3>
@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                
+
                 <div className="space-y-6 text-4xl">
                     <div>
                         <h3 className="mb-4 font-semibold">Consult</h3>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                
+
                 <div className="space-y-6 text-4xl font-semibold">
                     <div>
                         <h3 className="mb-4">About Us</h3>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            
+
             <div className="border-t pt-8">
                 <div className="mb-8">
                     <p className="text-gray-600 mb-4 text-[22px]">For whose daily routines involve PDF presentations</p>
@@ -55,7 +55,7 @@ const Footer = () => {
                     </button>
                 </div>
 
-                
+
                 <div className="flex justify-between items-center text-sm text-gray-600">
                     <p>© {date.getFullYear()} Alpheric</p>
                     <div className="flex gap-8">

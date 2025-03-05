@@ -5,7 +5,7 @@ import Design from './Pages/Design'
 import Questionaire from './Pages/Questionaire'
 import Hire from "./Pages/Hire"
 import Contact from './Pages/Contact'
-import Footer from './Pages/Footer' 
+import Footer from './Pages/Footer'
 import Vision from './Pages/VisionIntoReality/Vision'
 import Next from './Pages/VisionIntoReality/Next'
 import CustomerPage from "./Pages/CustomerPage"
@@ -19,17 +19,17 @@ function App() {
   return (
     <>
       <Navbar />
-      <Fab/>  
+      <Fab />
       <div>
         <HomePage />
-        <Design/>
+        <Design />
         <Questionaire />
         <CustomerPage />
         <SolutionPage />
         <Vision />
         <Pilotpage />
         <Next />
-        <BriefPage/>
+        <BriefPage />
         <Hire />
         <Contact />
         <Footer />
