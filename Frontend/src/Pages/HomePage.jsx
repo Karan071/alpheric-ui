@@ -52,8 +52,6 @@ const HomePage = () => {
                         <div className="flex items-center gap-2">
                             <img src={asset} alt="Image asset" />
                         </div>
-
-
                         <div className="space-y-8 mt-14">
                             <button
                                 onClick={() => {
@@ -82,11 +80,9 @@ const HomePage = () => {
                                     Grow Your Business — Together!  🚀
                                 </p>
                             </div>
-
                         </div>
                     </div>
 
-                    
                     <div className="md:w-1/2 relative h-full flex items-center justify-end">
                         <div className="absolute left-27 bottom-43 ">
                             <div className="relative w-40 h-40">
@@ -130,7 +126,6 @@ const HomePage = () => {
                                         >
                                             {isMuted ? <VolumeOff size={25} /> : <Volume2 size={25} />}
                                         </button>
-
 
                                         <button
                                             onClick={() => {

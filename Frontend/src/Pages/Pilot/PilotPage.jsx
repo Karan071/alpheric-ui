@@ -79,9 +79,9 @@ const Pilotpage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-white to-white py-20 relative overflow-hidden">
+        <div className="min-h-screen bg-gradient-to-b from-white to-white py-0 relative overflow-hidden">
             <motion.h1
-                className="text-center text-white font-instrument-sans font-semibold text-[80px] mb-20"
+                className="absolute left-1/2  transform -translate-x-1/2 -translate-y-1/6 text-black font-instrument-sans font-semibold text-[80px] leading-tight"
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -89,9 +89,9 @@ const Pilotpage = () => {
                 Book a Pilot
             </motion.h1>
 
-            <div className="relative h-[800px] w-full perspective-2000">
+            <div className="relative h-[800px] w-full perspective-2000 mb-2">
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <AnimatePresence mode="popLayout">
+                    <AnimatePresence mode="wait">
                         {pilotCards.map((card, index) => (
                             <motion.div
                                 key={index}
@@ -140,9 +140,9 @@ const Pilotpage = () => {
 
             <div className="absolute top-1/2 left-5 right-5 flex justify-between z-50 -translate-y-1/2">
                 <motion.button
-                    className="text-white bg-black/30 p-6 rounded-full hover:bg-black/30"
+                    className="text-white bg-black/30 p-4 rounded-full hover:bg-black/50 "
                     whileHover={{ scale: 0.8 }}
-                    whileTap={{ scale: 0.9 }}
+                    // whileTap={{ scale: 0.9 }}
                     onClick={() =>
                         setCurrentIndex(
                             (prev) => (prev - 1 + pilotCards.length) % pilotCards.length
@@ -153,9 +153,9 @@ const Pilotpage = () => {
                 </motion.button>
 
                 <motion.button
-                    className="text-white bg-black/30 p-6 rounded-full hover:bg-black/50"
+                    className="text-white bg-black/30 p-4 rounded-full hover:bg-black/50"
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                    // whileTap={{ scale: 0.9 }}
                     onClick={() =>
                         setCurrentIndex((prev) => (prev + 1) % pilotCards.length)
                     }

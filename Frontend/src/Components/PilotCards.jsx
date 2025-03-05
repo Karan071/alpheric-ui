@@ -10,7 +10,7 @@ const PilotCards = ({
     imageSrc,
 }) => {
     return (
-        <div className="font-instrument-sans relative w-full h-[590px] flex justify-center overflow-hidden">
+        <div className="font-instrument-sans relative w-full h-[560px] flex justify-center overflow-hidden">
 
             <div className="absolute inset-0 left-[116px] right-[116px] h-full rounded-[32px] overflow-hidden">
                 <img
