@@ -33,7 +33,6 @@ function App() {
         <Hire />
         <Contact />
         <Footer />
-        {/* <Customer/> */}
       </div>
     </>
   )
