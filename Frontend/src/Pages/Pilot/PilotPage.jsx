@@ -81,7 +81,7 @@ const Pilotpage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-white py-0 relative overflow-hidden">
             <motion.h1
-                className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/6 text-black font-instrument-sans font-semibold text-[80px] leading-tight mb-2"
+                className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/5 text-black font-instrument-sans font-semibold text-[80px] leading-tight mb-2"
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -122,7 +122,7 @@ const Pilotpage = () => {
                     ))}
                 </AnimatePresence>
 
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex gap-4 z-50">
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-4 z-50">
                     {pilotCards.map((_, index) => (
                         <motion.button
                             key={index}
@@ -136,7 +136,7 @@ const Pilotpage = () => {
                 </div>
             </div>
 
-            <div className="absolute top-1/2 left-5 right-5 flex justify-between z-50 -translate-y-1/2">
+            {/* <div className="absolute top-1/2 left-5 right-5 flex justify-between z-50 -translate-y-1/2">
                 <motion.button
                     className="text-white bg-black/30 p-4 rounded-full hover:bg-black/50 "
                     whileHover={{ scale: 0.8 }}
@@ -158,7 +158,7 @@ const Pilotpage = () => {
                 >
                     <ChevronRight size={60} />
                 </motion.button>
-            </div>
+            </div> */}
         </div>
     );
 };

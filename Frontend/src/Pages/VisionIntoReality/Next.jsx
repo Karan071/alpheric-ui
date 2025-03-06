@@ -14,7 +14,7 @@ const Next = () => {
             <motion.div
                 className='flex flex-col items-center'
                 initial={{ scale: 0.55, x: 0 }}
-                animate={{ y: -50 }}
+                animate={{ y: -100 }}
                 transition={{ ease:"easeInOut" }}
                 style={{ translateY, scale }}
             >
