@@ -94,7 +94,7 @@ const HomePage = () => {
                             </div>
                         </div>
                         <div className="relative">
-                            <div className="w-[900px] mx-auto h-[690px] absolute right-[-240px] top-[-400px]">
+                            <div className="hidden md:block lg:block w-[900px] mx-auto h-[690px] absolute right-[-240px] top-[-400px]">
                                 <img src={Spiral} />
                             </div>
                             
