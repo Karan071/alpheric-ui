@@ -136,13 +136,13 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                         <div className="flex justify-between">
                             <motion.button
                                 onClick={() => onAnswer("no")}
-                                className="absolute -left-2 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium shadow-lg"
+                                className="absolute -left-2 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium shadow-lg hover:bg-[#56c8dc] transition duration-500"
                             >
                                 No
                             </motion.button>
                             <motion.button
                                 onClick={() => onAnswer("yes")}
-                                className="absolute -right-3 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium shadow-lg"
+                                className="absolute -right-3 -bottom-5 bg-black text-white p-7 text-[24px] rounded-full font-medium shadow-lg hover:bg-[#56c8dc] transition duration-500"
                             >
                                 Yes
                             </motion.button>
@@ -158,7 +158,7 @@ const QuestionnaireCard = ({ question, stepNumber, totalSteps, onAnswer }) => {
                         </h2>
                         <motion.button
                             onClick={() => onAnswer("view")}
-                            className="bg-black text-white text-[24px] px-4 py-6 rounded-full absolute -bottom-7 -translate-x-1/2 shadow-lg"
+                            className="bg-black text-white text-[24px] px-4 py-6 rounded-full absolute -bottom-7 -translate-x-1/2 shadow-lg hover:bg-[#56c8dc] transition duration-500"
                         >
                             View
                         </motion.button>

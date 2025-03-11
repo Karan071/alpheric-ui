@@ -73,7 +73,7 @@ const SolutionPage = () => {
                 className="h-screen flex flex-col justify-center items-center font-instrument-sans"
             >
                 <div className="text-[80px] md:text-[140px] text-center font-semibold">
-                    What Are We Fighting Against?
+                    What Are We<br/> Fighting Against?
                 </div>
                 <div className="text-gray-500 text-[24px] md:text-[40px] text-center">
                     Users not engaging with your design or project

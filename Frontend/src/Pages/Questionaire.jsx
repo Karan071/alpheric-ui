@@ -158,19 +158,6 @@ const Questionaire = () => {
                         })}
                     </AnimatePresence>
                 </div>
-
-                <div
-                    className="absolute top-2 left-0 right-0 -z-10 opacity-90"
-                    style={{ transform: 'scale(0.98)' }}
-                >
-                    <div className="w-[671px] h-[289px] bg-white rounded-[24px] border border-gray-300 shadow-sm" />
-                </div>
-                <div
-                    className="absolute top-4 left-0 right-0 -z-20 opacity-80"
-                    style={{ transform: 'scale(0.96)' }}
-                >
-                    <div className="w-[671px] h-[289px] bg-white rounded-[24px] border border-gray-300 shadow-sm" />
-                </div>
             </div>
         </section>
     );

@@ -80,16 +80,11 @@ const Pilotpage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-white py-0 relative overflow-hidden">
-            <motion.h1
-                className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/5 text-black font-instrument-sans font-semibold text-[80px] leading-tight mb-2"
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
-            >
+            <div className="flex justify-center items-center font-instrument-sans text-4xl md:text-[120px] font-semibold px-4 text-center">
                 Book a Pilot
-            </motion.h1>
+            </div>
 
-            <div className="relative h-[800px] w-full perspective-2000 mb-6">
+            <div className="relative h-[600px] md:h-[800px] w-full perspective-2000 mb-6">
                 <AnimatePresence mode="wait">
                     {pilotCards.map((card, index) => (
                         <motion.div
