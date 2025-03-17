@@ -24,6 +24,7 @@ function App() {
         <HomePage />
         <Design />
         <Questionaire />
+        {/* <Customer/> */}
         {/* <CustomerPage /> */}
         <SolutionPage />
         <Vision />

@@ -117,7 +117,20 @@ const Pilotpage = () => {
                     ))}
                 </AnimatePresence>
 
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-4 z-50">
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-50">
+                    <motion.button
+                        className="text-black bg-white/80 p-2 rounded-full hover:bg-[#56c8dc] hover:text-white transition-colors"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() =>
+                            setCurrentIndex(
+                                (prev) => (prev - 1 + pilotCards.length) % pilotCards.length
+                            )
+                        }
+                    >
+                        <ChevronLeft size={24} />
+                    </motion.button>
+                    
                     {pilotCards.map((_, index) => (
                         <motion.button
                             key={index}
@@ -128,32 +141,19 @@ const Pilotpage = () => {
                             onClick={() => setCurrentIndex(index)}
                         />
                     ))}
+                    
+                    <motion.button
+                        className="text-black bg-white/80 p-2 rounded-full hover:bg-[#56c8dc] hover:text-white transition-colors"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() =>
+                            setCurrentIndex((prev) => (prev + 1) % pilotCards.length)
+                        }
+                    >
+                        <ChevronRight size={24} />
+                    </motion.button>
                 </div>
             </div>
-
-            {/* <div className="absolute top-1/2 left-5 right-5 flex justify-between z-50 -translate-y-1/2">
-                <motion.button
-                    className="text-white bg-black/30 p-4 rounded-full hover:bg-black/50 "
-                    whileHover={{ scale: 0.8 }}
-                    onClick={() =>
-                        setCurrentIndex(
-                            (prev) => (prev - 1 + pilotCards.length) % pilotCards.length
-                        )
-                    }
-                >
-                    <ChevronLeft size={60} />
-                </motion.button>
-
-                <motion.button
-                    className="text-white bg-black/30 p-4 rounded-full hover:bg-black/50"
-                    whileHover={{ scale: 1.1 }}
-                    onClick={() =>
-                        setCurrentIndex((prev) => (prev + 1) % pilotCards.length)
-                    }
-                >
-                    <ChevronRight size={60} />
-                </motion.button>
-            </div> */}
         </div>
     );
 };
