@@ -94,13 +94,13 @@ const Questionaire = () => {
     };
 
     return (
-        <section className="max-w-full min-h-screen px-[120px] flex flex-row items-center gap-10 overflow-hidden">
-            <div className="flex flex-col gap-6 w-1/2">
+        <section className="max-w-full min-h-screen px-4 sm:px-8 md:px-12 lg:px-[120px] flex flex-col lg:flex-row items-center gap-6 lg:gap-10 overflow-hidden py-8">
+            <div className="flex flex-col gap-4 lg:gap-6 w-full lg:w-1/2 text-center lg:text-left">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="font-instrument-sans font-semibold text-[84px]/24 mt-5"
+                    className="font-instrument-sans font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[84px]/24 mt-5"
                 >
                     Answer a few questions to unlock Insights into
                 </motion.h1>
@@ -108,14 +108,14 @@ const Questionaire = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="font-instrument-serif italic text-[70px]"
+                    className="font-instrument-serif italic text-3xl sm:text-4xl md:text-5xl lg:text-[70px]"
                 >
                     Innovation with AI and Cloud
                 </motion.h3>
             </div>
 
-            <div className="relative w-[671px]">
-                <div className="relative h-[289px]">
+            <div className="relative w-full max-w-[671px] mt-8 lg:mt-0 ">
+                <div className="relative h-[289px] sm:h-[320px] md:h-[350px]">
                     <AnimatePresence mode="popLayout">
                         {questions.map((question, index) => {
                             if (index >= currentStep - 1 && index < currentStep + 2) {

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import SolutionCard from "../../Components/SolutionCard";
 
 // Images imports
@@ -57,31 +57,43 @@ const cardsData = [
 
 const SolutionPage = () => {
     const containerRef = useRef(null);
+    const heroSectionRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end end"]
     });
+    
+    const { scrollYProgress: heroScrollProgress } = useScroll({
+        target: heroSectionRef,
+        offset: ["start center", "end start"]
+    });
+    
+    const translateY = useTransform(heroScrollProgress, [0, 1], [0, -300]);
+    const scale = useTransform(heroScrollProgress, [0, 1], [1, 0.50]);
 
     const totalCards = cardsData.length;
 
     return (
         <div>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="h-screen flex flex-col justify-center items-center font-instrument-sans"
-            >
-                <div className="text-[80px] md:text-[140px] text-center font-semibold">
-                    What Are We<br/> Fighting Against?
-                </div>
-                <div className="text-gray-500 text-[24px] md:text-[40px] text-center">
-                    Users not engaging with your design or project
-                </div>
-                <div className="text-gray-500 text-[22px] md:text-[38px] text-center">
-                    Let's turn that challenge into opportunities.
-                </div>
-            </motion.div>
+            <section ref={heroSectionRef} className="h-screen flex flex-col justify-center items-center font-instrument-sans">
+                <motion.div
+                    initial={{ scale: 0.55, x: 0 }}
+                    animate={{ y: -100 }}
+                    transition={{ ease: "easeIn" }}
+                    style={{ translateY, scale }}
+                    className="flex flex-col items-center"
+                >
+                    <div className="text-[80px] md:text-[140px] text-center font-semibold">
+                        What Are We<br/> Fighting Against?
+                    </div>
+                    <div className="text-gray-500 text-[24px] md:text-[40px] text-center">
+                        Users not engaging with your design or project
+                    </div>
+                    <div className="text-gray-500 text-[22px] md:text-[38px] text-center">
+                        Let's turn that challenge into opportunities.
+                    </div>
+                </motion.div>
+            </section>
 
             <div ref={containerRef} className="relative h-[600vh]">
                 <div className="sticky top-0 h-screen flex items-center overflow-hidden">
