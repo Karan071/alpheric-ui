@@ -84,21 +84,17 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    {/* Right content section with spiral and animation */}
+                    {/* {Alpheric gif} */}
                     <div className="w-full lg:w-1/2 relative h-full flex items-center justify-center lg:justify-end">
-                        <div className="hidden md:block absolute left-20 bottom-38 z-10">
-                            <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40">
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full flex items-center justify-center">
-                                        <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
-                                    </div>
-                                </div>
+                        <div className="hidden md:block absolute z-10 sm:left-10 md:left-120 lg:left-0 xl:left-20 sm:bottom-20 md:bottom-140 lg:bottom-32 transform sm:-translate-y-10 md:-translate-y-0">
+                            <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden">
+                                <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
                             </div>
                         </div>
 
                         <div className="relative">
                             {/* Spiral background */}
-                            <div className="hidden md:block w-full md:w-[600px] lg:w-[900px] mx-auto h-[690px] md:absolute md:right-[-700px] lg:right-[-280px] md:top-[-600px] lg:top-[-400px]">
+                            <div className="hidden md:block w-full md:w-[510px] lg:w-[900px] mx-auto h-[690px] md:absolute md:right-[-680px] lg:right-[-280px] md:top-[-600px] lg:top-[-400px] ">
                                 <img src={Spiral} alt="Spiral background" className="w-full h-auto" />
                             </div>
 
