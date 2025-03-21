@@ -3,7 +3,7 @@ import { motion, useTransform, useSpring } from "framer-motion";
 import SolutionTag from "./SolutionTag";
 
 const SolutionCard = ({ title, description, imageUrl, tags, scrollYProgress, index, totalCards }) => {
-    
+
     const smoothScrollYProgress = useSpring(scrollYProgress, {
         stiffness: 50,
         damping: 15,
@@ -32,13 +32,12 @@ const SolutionCard = ({ title, description, imageUrl, tags, scrollYProgress, ind
         [0, 1, 1, 0]
     );
 
-    // Text animation (keep similar timing but match the crossfade aesthetic)
     const textFadePortion = 0.4 * chunk;
 
     const textY = useTransform(
         smoothScrollYProgress,
         [start, start + textFadePortion, end - textFadePortion, end],
-        [300, 0, 0, -300]
+        [300, 0, 0, -550] //
     );
 
     // Adjust text opacity to match the image crossfade
@@ -73,7 +72,6 @@ const SolutionCard = ({ title, description, imageUrl, tags, scrollYProgress, ind
                         src={imageUrl}
                         alt={title}
                         className="w-[500px] h-[700px] object-cover rounded-[36px] shadow-sm"
-                    // Remove mix-blend-mode to prevent white flash
                     />
                 </motion.div>
             </div>

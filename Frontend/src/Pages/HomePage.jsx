@@ -86,7 +86,7 @@ const HomePage = () => {
 
                     {/* {Alpheric gif} */}
                     <div className="w-full lg:w-1/2 relative h-full flex items-center justify-center lg:justify-end">
-                        <div className="hidden md:block absolute z-10 sm:left-10 md:left-120 lg:left-0 xl:left-20 sm:bottom-20 md:bottom-140 lg:bottom-32 transform sm:-translate-y-10 md:-translate-y-0">
+                        <div className="hidden md:block absolute z-10 sm:left-10 md:left-120 lg:left-10 xl:left-20 sm:bottom-20 md:bottom-140 lg:bottom-32 transform sm:-translate-y-10 md:-translate-y-0">
                             <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden">
                                 <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
                             </div>
