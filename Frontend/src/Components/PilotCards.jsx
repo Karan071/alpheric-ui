@@ -163,7 +163,7 @@ const PilotCards = ({
               </span>
               <button
                 onClick={onButtonClick}
-                className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all"
+                className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all cursor-pointer"
               >
                 {buttonText}
               </button>

@@ -298,6 +298,7 @@ const pilotCards = [
     duration: "2 weeks",
     buttonText: "Book a pilot",
     imageSrc: pilot1,
+    onButtonClick: "https://www.lipsum.com/"
   },
   {
     title: "Pilot for Startups",
@@ -306,6 +307,7 @@ const pilotCards = [
     duration: "4 weeks",
     buttonText: "Book a pilot",
     imageSrc: pilot2,
+    onButtonClick: "https://www.lipsum.com/"
   },
   {
     title: "Pilot For SMBs",
@@ -314,6 +316,7 @@ const pilotCards = [
     duration: "4 weeks",
     buttonText: "Book a pilot",
     imageSrc: pilot3,
+    onButtonClick: "https://www.lipsum.com/"
   },
   {
     title: "Pilot for Enterprise",
@@ -322,6 +325,7 @@ const pilotCards = [
     duration: "6 weeks",
     buttonText: "Book a pilot",
     imageSrc: pilot4,
+    onButtonClick: "https://www.lipsum.com/"
   },
 ];
 
@@ -341,7 +345,7 @@ const Pilotpage = () => {
       ref={containerRef}
       className="min-h-[400vh] bg-gradient-to-b from-white to-white relative"
     >
-      <div className="sticky top-0 h-screen flex flex-col">
+      <div className="sticky top-8 h-screen flex flex-col">
         <div className="flex justify-center items-center font-instrument-sans text-4xl md:text-[120px] font-semibold px-4 text-center pt-10">
           Book a Pilot
         </div>
@@ -353,6 +357,15 @@ const Pilotpage = () => {
               <motion.div
                 key={index}
                 className="absolute inset-0 flex items-center justify-center w-full"
+                exit={{
+                  scale: 0.1,
+                }}
+                initial={{
+                  scale: 1
+                }}
+                animate={{
+                  scale: 0.4
+                }}
                 style={{
                   transformOrigin: "50% 100%",
                   rotateX: useTransform(

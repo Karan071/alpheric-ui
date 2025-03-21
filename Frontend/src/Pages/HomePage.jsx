@@ -45,15 +45,15 @@ const HomePage = () => {
 
     return (
         <section id="#" className="min-h-screen w-full bg-[radial-gradient(ellipse_50%_100%_at_top_right,#EDE6FE_10%,#FFFFFF_100%)] overflow-clip">
-            <div className="w-full h-screen flex items-center px-4 sm:px-6 md:px-12 lg:px-[80px]">
+            <div className="w-full h-screen flex items-center px-4 sm:px-6 md:px-12 lg:px-[90px]">
                 <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 lg:gap-0">
 
                     {/* Left content section */}
-                    <div className="w-full lg:w-1/2 flex flex-col justify-center mt-16 lg:mt-0">
+                    <div className="w-full lg:w-1/2 flex flex-col justify-center mt-20 lg:mt-0">
                         <div className="flex items-center gap-2">
                             <img src={asset} alt="Image asset" className="w-auto h-auto " />
                         </div>
-                        <div className="space-y-6 md:space-y-8 mt-8 md:mt-14">
+                        <div className="space-y-6 md:space-y-8 mt-8 md:mt-16">
                             <button
                                 onClick={() => {
                                     window.scrollTo({
@@ -86,7 +86,7 @@ const HomePage = () => {
 
                     {/* {Alpheric gif} */}
                     <div className="w-full lg:w-1/2 relative h-full flex items-center justify-center lg:justify-end">
-                        <div className="hidden md:block absolute z-10 sm:left-10 md:left-120 lg:left-10 xl:left-20 sm:bottom-20 md:bottom-140 lg:bottom-32 transform sm:-translate-y-10 md:-translate-y-0">
+                        <div className="hidden md:block absolute z-10 sm:left-10 md:left-120 lg:left-10 xl:left-20 sm:bottom-20 md:bottom-120 lg:bottom-32 transform sm:-translate-y-10 md:-translate-y-0">
                             <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden">
                                 <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
                             </div>
