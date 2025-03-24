@@ -86,7 +86,7 @@ const HomePage = () => {
 
                     {/* {Alpheric gif} */}
                     <div className="w-full lg:w-1/2 relative h-full flex items-center justify-center lg:justify-end">
-                        <div className="hidden md:block absolute z-10 sm:left-10 md:left-120 lg:left-10 xl:left-20 sm:bottom-20 md:bottom-120 lg:bottom-32 transform sm:-translate-y-10 md:-translate-y-0">
+                        <div className="hidden md:block absolute z-10 sm:left-10 md:left-120 lg:left-10 xl:left-20 sm:bottom-20 md:bottom-120 lg:bottom-32 transform sm:-translate-y-10 md:-translate-y-12 ">
                             <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full overflow-hidden">
                                 <img src={alpheric_animation} alt="alpheric-logo" className="w-full h-full object-cover" />
                             </div>
@@ -94,13 +94,13 @@ const HomePage = () => {
 
                         <div className="relative">
                             {/* Spiral background */}
-                            <div className="hidden md:block w-full md:w-[510px] lg:w-[900px] mx-auto h-[690px] md:absolute md:right-[-680px] lg:right-[-280px] md:top-[-600px] lg:top-[-400px] ">
+                            <div className="hidden md:block w-full md:w-[510px] lg:w-[900px] mx-auto h-[690px] md:absolute md:right-[-680px] lg:right-[-260px] md:top-[-600px] lg:top-[-400px]">
                                 <img src={Spiral} alt="Spiral background" className="w-full h-auto" />
                             </div>
 
                             {/* Video panel */}
                             {isShowingPanel && (
-                                <div className="fixed bottom-6 sm:bottom-16 md:bottom-25 right-2 sm:right-6 md:right-8 bg-slate-900 text-white rounded-3xl sm:rounded-4xl h-[280px] sm:h-[350px] md:h-[409px] w-[180px] sm:w-[200px] md:w-[230px] z-50">
+                                <div className="fixed bottom-12 md:bottom-25 md:right-8 bg-slate-900 text-white rounded-3xl sm:rounded-4xl h-[280px] sm:h-[350px] md:h-[409px] w-[180px] sm:w-[200px] md:w-[230px] z-50">
                                     <div className="relative">
                                         <video
                                             src="https://rondesignlab.com/video/common/intercom.mp4"
@@ -152,7 +152,7 @@ const HomePage = () => {
 
                             {/* Toggle button for panel */}
                             <button
-                                className="fixed bottom-16 sm:bottom-24 md:bottom-30 right-0 sm:-right-3 md:-right-5 bg-white text-black rounded-l-4xl h-12 w-6 sm:h-16 sm:w-8 md:h-20 md:w-10 z-50 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
+                                className="fixed bottom-16 sm:bottom-24 md:bottom-30 right-0 sm:-right-3 md:-right-5 bg-white text-black rounded-l-4xl h-12 w-6 sm:h-16 sm:w-8 md:h-20 md:w-10 z-50 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105 flex items-center"
                                 onClick={() => setIsShowingPanel(true)}>
                                 {isShowingPanel ? (
                                     <ChevronRight size={16} className="sm:hidden" />

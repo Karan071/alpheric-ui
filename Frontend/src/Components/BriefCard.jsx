@@ -36,14 +36,14 @@ const BriefCard = ({
     const descriptionY = useTransform(
         smoothScroll,
         [start, start + 0.5 * textFadePortion, end - 0.5 * textFadePortion, end],
-        [200, 0, 0, -200]
+        [200, 0, 0, -400]
     );
 
     // List items specific animation
     const listY = useTransform(
         smoothScroll,
         [start, start + 0.5 * textFadePortion, end - 0.5 * textFadePortion, end],
-        [200, 0, 0, -200]
+        [200, 0, 0, -400]
     );
 
 
@@ -76,7 +76,7 @@ const BriefCard = ({
     return (
         <div className="absolute inset-0 flex items-center">
             {/* --- Left Text Section --- */}
-            <div className="w-1/2 px-12 relative overflow-visible">
+            <div className="w-1/2 px-12 relative overflow-hidden">
                 <motion.div
                     style={{ opacity: contentOpacity }}
                     transition={baseTransition}

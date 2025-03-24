@@ -4,12 +4,18 @@ import { ChevronDown, Menu, X } from "lucide-react";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeItem, setActiveItem] = useState("Consult");
+    
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+    
+    const handleItemClick = (itemName) => {
+        setActiveItem(itemName);
+    };
 
     return (
-        <nav className="fixed top-0 left-0 w-full flex items-center justify-between font-urbanist px-3 sm:px-6 lg:px-20 py-4 bg-transparent backdrop-blur-md z-50">
+        <nav className="fixed top-0 left-0 w-full flex items-center justify-between font-urbanist px-3 md:px-6 lg:px-20 py-5 bg-transparent backdrop-blur-md z-50">
             {/* Logo */}
             <div className="relative ml-0">
                 <img 
@@ -19,19 +25,79 @@ const Navbar = () => {
                 />
             </div>
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-4 border border-white rounded-full px-4 py-2 text-base backdrop-blur-lg mx-4  ">
-                <a className="flex justify-center items-center gap-1" href="#">Consult <ChevronDown size={15} /></a>
-                <a href="#about">Build</a>
-                <a href="#design">Design</a>
-                <a href="#host">Host</a>
-                <a href="#secure">Secure</a>
-                <a href="#market">Market</a>
-                <a href="#support">Support</a>
-                <a href="#services" className="flex justify-center items-center gap-1">Services <ChevronDown size={15} /></a>
-                <a href="#hire" className="flex justify-center items-center gp-1">Hire <ChevronDown size={15} /></a>
-                <a href="#joinus">Join Us</a>
-                <a href="#action">Action</a>
-                <a href="#insights">Insights</a>
+            <div className="hidden lg:flex items-center gap-5 border border-white rounded-full px-4 py-2 text-base backdrop-blur-lg mx-4 font-medium">
+                <a className={`flex justify-center items-center gap-1 relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Consult" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#" 
+                    onClick={() => handleItemClick("Consult")}>
+                    Consult <ChevronDown size={15} />
+                    {activeItem === "Consult"}
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Build" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#about" 
+                    onClick={() => handleItemClick("Build")}>
+                    Build
+                    {activeItem === "Build"}
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Design" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#design" 
+                    onClick={() => handleItemClick("Design")}>
+                    Design
+                    {activeItem === "Design" }
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Host" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#host" 
+                    onClick={() => handleItemClick("Host")}>
+                    Host
+                    {activeItem === "Host" }
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Secure" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#secure" 
+                    onClick={() => handleItemClick("Secure")}>
+                    Secure
+                    {activeItem === "Secure" }
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Market" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#market" 
+                    onClick={() => handleItemClick("Market")}>
+                    Market
+                    {activeItem === "Market" }
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Support" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#support" 
+                    onClick={() => handleItemClick("Support")}>
+                    Support
+                    {activeItem === "Support" }
+                </a>
+                <a className={`flex justify-center items-center gap-1 relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Services" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#services" 
+                    onClick={() => handleItemClick("Services")}>
+                    Services <ChevronDown size={15} />
+                    {activeItem === "Services"}
+                </a>
+                <a className={`flex justify-center items-center gap-1 relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Hire" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#hire" 
+                    onClick={() => handleItemClick("Hire")}>
+                    Hire <ChevronDown size={15} />
+                    {activeItem === "Hire" }
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Join Us" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#joinus" 
+                    onClick={() => handleItemClick("Join Us")}>
+                        Join Us
+                    {activeItem === "Join Us"}
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Action" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#action" 
+                    onClick={() => handleItemClick("Action")}>
+                    Action
+                    {activeItem === "Action"}
+                </a>
+                <a className={`relative hover:bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 ${activeItem === "Insights" ? "bg-[#56c8dc]/30 rounded-4xl px-2.5 py-1.5 border border-blue-500" : ""}`} 
+                    href="#insights" 
+                    onClick={() => handleItemClick("Insights")}>
+                    Insights
+                    {activeItem === "Insights" }
+                </a>
             </div>
             {/* Desktop Sign-Up Button */}
             <button className="hidden lg:block px-4 py-2 text-base rounded-full bg-white text-black hover:bg-[#56c8dc]">
@@ -62,7 +128,7 @@ const Navbar = () => {
                     <a href="#joinus" onClick={toggleMenu}>Join Us</a>
                     <a href="#action" onClick={toggleMenu}>Action</a>
                     <a href="#insights" onClick={toggleMenu}>Insights</a>
-                    <button className="w-full mt-6 px-6 py-3 text-lg rounded-full bg-white text-black hover:bg-[#56c8dc]">
+                    <button className="w-full mt-6 px-6 py-3 text-lg rounded-full bg-white text-black hover:bg-[#56c8dc] hover:border-blue-500">
                         Sign Up
                     </button>
 

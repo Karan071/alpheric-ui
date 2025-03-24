@@ -37,7 +37,7 @@ const Questionaire = () => {
                 setCurrentStep((prev) => prev + 1);
                 setIsRotated(true);
             }
-        }, 500); // Match the transition duration
+        }, 500); 
     };
 
     return (
@@ -47,7 +47,7 @@ const Questionaire = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="font-instrument-sans font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[84px]/24 mt-5"
+                    className="font-instrument-sans font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[80px]/24 xl:text-[84px]/24 mt-5"
                 >
                     Answer a few questions to unlock Insights into
                 </motion.h1>
@@ -76,7 +76,7 @@ const Questionaire = () => {
                                             y: stackPosition * 8,
                                             scale: 1 - stackPosition * 0.02,
                                             opacity: 1 - stackPosition * 0.2,
-                                            rotate: index < currentStep ? 0 : 6,
+                                            rotate: stackPosition === 0 ? 0 : (stackPosition === 1 ? 3 : 6),
                                             transition: {
                                                 duration: 0.5,
                                                 ease: "easeOut",
@@ -84,7 +84,7 @@ const Questionaire = () => {
                                         }}
                                         exit={{
                                             y: "-100vh",
-                                            rotate: index < currentStep ? 0 : 6,
+                                            rotate: stackPosition === 0 ? 0 : (stackPosition === 1 ? 3 : 6),
                                             transition: {
                                                 duration: 0.5,
                                                 ease: "easeIn",

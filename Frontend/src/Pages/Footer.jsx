@@ -4,66 +4,64 @@ const date = new Date();
 
 const Footer = () => {
     return (
-        <footer className=" container mx-auto px-6 py-12 font-urbanist">
-            <div className="grid grid-cols-3 gap-20 mb-20">
-
-                <div className="space-y-6 text-4xl gap-4">
-                    <div>
-                        <h3 className="mb-2 font-semibold">Say Hello 👋</h3>
-                        <div className="space-y-7 mt-6">
-                            <p><a href="https://www.linkedin.com/company/alphericconsultants/" target="_blank">LinkedIn</a></p>
-                            <p><a href="https://www.instagram.com/alpheric.consultants/" target='_blank'>Instagram</a></p>
-                            <p><a href="">Dribbble</a></p>
-                            <p><a href="">Behance</a></p>
-                        </div>
+        <footer className="container mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12 font-urbanist">
+            {/* Main Content Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 mb-12 sm:mb-20">
+                {/* Say Hello Section */}
+                <div className="space-y-4 sm:space-y-6">
+                    <h3 className="mb-2 text-2xl sm:text-3xl lg:text-4xl font-semibold">Say Hello 👋</h3>
+                    <div className="space-y-4 sm:space-y-7 mt-4 sm:mt-6 text-xl sm:text-2xl lg:text-4xl">
+                        <p><a href="https://www.linkedin.com/company/alphericconsultants/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                        <p><a href="https://www.instagram.com/alpheric.consultants/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+                        <p><a href="">Dribbble</a></p>
+                        <p><a href="">Behance</a></p>
                     </div>
                 </div>
 
-
-                <div className="space-y-6 text-4xl">
-                    <div>
-                        <h3 className="mb-4 font-semibold">Consult</h3>
-                        <div className="space-y-5">
-                            <p>Design</p>
-                            <p>Build</p>
-                            <p>Host</p>
-                            <p>Secure</p>
-                            <p>Market</p>
-                        </div>
+                {/* Consult Section */}
+                <div className="space-y-4 sm:space-y-6">
+                    <h3 className="mb-2 sm:mb-4 text-2xl sm:text-3xl lg:text-4xl font-semibold">Consult</h3>
+                    <div className="space-y-3 sm:space-y-5 text-xl sm:text-2xl lg:text-4xl">
+                        <p>Design</p>
+                        <p>Build</p>
+                        <p>Host</p>
+                        <p>Secure</p>
+                        <p>Market</p>
                     </div>
                 </div>
 
-
-                <div className="space-y-6 text-4xl font-semibold">
-                    <div>
-                        <h3 className="mb-4">About Us</h3>
-                        <div className="space-y-5">
-                            <p>Career</p>
-                            <p>Actions</p>
-                            <p>Insights</p>
-                        </div>
+                {/* About Us Section */}
+                <div className="space-y-4 sm:space-y-6">
+                    <h3 className="mb-2 sm:mb-4 text-2xl sm:text-3xl lg:text-4xl font-semibold">About Us</h3>
+                    <div className="space-y-3 sm:space-y-5 text-xl sm:text-2xl lg:text-4xl">
+                        <p>Career</p>
+                        <p>Actions</p>
+                        <p>Insights</p>
                     </div>
                 </div>
             </div>
 
-
-            <div className="border-t pt-8">
-                <div className="mb-8">
-                    <p className="text-gray-600 mb-4 text-[22px]">For whose daily routines involve PDF presentations</p>
-                    <button className="flex items-center gap-2 text-black ">
+            {/* Bottom Section */}
+            <div className="border-t pt-6 sm:pt-8">
+                {/* PDF Download Section */}
+                <div className="mb-6 sm:mb-8">
+                    <p className="text-gray-600 mb-3 sm:mb-4 text-base sm:text-lg lg:text-[22px]">
+                        For whose daily routines involve PDF presentations
+                    </p>
+                    <button className="flex items-center gap-2 text-black text-base sm:text-lg lg:text-xl bg-white/10 px-5 py-4 rounded-2xl hover:bg-black hover:text-white">
                         Download & Share PDF ☺️ <Download className="ml-1" />
                     </button>
                 </div>
 
-
-                <div className="flex justify-between items-center text-sm text-gray-600">
+                {/* Copyright and Links */}
+                <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600 gap-4 sm:gap-0">
                     <p>© {date.getFullYear()} Alpheric</p>
-                    <div className="flex gap-8">
-                        <a href="#">Sitemap</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Cookie Policy</a>
-                        <a href="#">Goto Top</a>
+                    <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-8">
+                        <a href="#" className="hover:text-gray-800">Sitemap</a>
+                        <a href="#" className="hover:text-gray-800">Privacy Policy</a>
+                        <a href="#" className="hover:text-gray-800">Terms of Use</a>
+                        <a href="#" className="hover:text-gray-800">Cookie Policy</a>
+                        <a href="#" className="hover:text-gray-800">Goto Top</a>
                     </div>
                 </div>
             </div>
