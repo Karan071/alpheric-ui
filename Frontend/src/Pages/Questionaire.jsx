@@ -71,12 +71,12 @@ const Questionaire = () => {
                                     <motion.div
                                         key={index}
                                         className="absolute w-full"
-                                        initial={{ y: "100vh", rotate: index === currentStep - 1 ? 0 : 4 }}
+                                        initial={{ y: "100vh", rotate: index === currentStep - 1 ? 0 : -4 }}
                                         animate={{
                                             y: stackPosition * 8,
                                             scale: 1 - stackPosition * 0.02,
                                             opacity: 1 - stackPosition * 0.2,
-                                            rotate: stackPosition === 0 ? 0 : (stackPosition === 1 ? 3 : 6),
+                                            rotate: stackPosition === 0 ? 0 : -4 * stackPosition,
                                             transition: {
                                                 duration: 0.5,
                                                 ease: "easeOut",
@@ -84,7 +84,7 @@ const Questionaire = () => {
                                         }}
                                         exit={{
                                             y: "-100vh",
-                                            rotate: stackPosition === 0 ? 0 : (stackPosition === 1 ? 3 : 6),
+                                            rotate: stackPosition === 0 ? 0 : -4 * stackPosition,
                                             transition: {
                                                 duration: 0.5,
                                                 ease: "easeIn",

@@ -15,9 +15,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="fixed top-0 left-0 w-full flex items-center justify-between font-urbanist px-3 md:px-6 lg:px-20 py-5 bg-transparent backdrop-blur-md z-50">
+        <nav className="fixed top-0 left-0 w-full flex items-center justify-between font-urbanist px-3 md:px-4 lg:px-9 py-5 bg-transparent backdrop-blur-md z-50">
             {/* Logo */}
-            <div className="relative ml-0">
+            <div className="relative ml-0 lg:ml-12">
                 <img 
                     src={Alphericlogo} 
                     alt="company logo" 
@@ -128,7 +128,7 @@ const Navbar = () => {
                     <a href="#joinus" onClick={toggleMenu}>Join Us</a>
                     <a href="#action" onClick={toggleMenu}>Action</a>
                     <a href="#insights" onClick={toggleMenu}>Insights</a>
-                    <button className="w-full mt-6 px-6 py-3 text-lg rounded-full bg-white text-black hover:bg-[#56c8dc] hover:border-blue-500">
+                    <button className="w-full mt-6 px-5 py-3 text-lg rounded-full bg-white text-black hover:bg-[#56c8dc] hover:border-blue-500">
                         Sign Up
                     </button>
 

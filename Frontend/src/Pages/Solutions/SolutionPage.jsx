@@ -30,28 +30,40 @@ const cardsData = [
         description:
             "Develop solutions tailored to your goals, from robust platforms to seamless integrations.",
         imageUrl: Build,
-        tags: ["Mobile", "Web App", "AI & Automation", "Enterprise Application"]
+        tags: ["Mobile", "Web App", "AI & Automation", "Enterprise Application"],
     },
     {
         title: "Design",
         description:
             "Craft stunning, user-friendly experiences that connect with your audience.",
         imageUrl: Design,
-        tags: ["Branding", "UX/UI Design", "Concept Design", "Product Design"]
+        tags: ["Branding", "UX/UI Design", "Concept Design", "Product Design"],
     },
     {
         title: "Host",
         description:
             "Ensure your digital presence is reliable, fast, and secure with premium hosting solutions.",
         imageUrl: Host,
-        tags: ["Web Hosting", "Cloud", "Server Management", "AWS", "Google Cloud", "Azure"]
+        tags: [
+            "Web Hosting",
+            "Cloud",
+            "Server Management",
+            "AWS",
+            "Google Cloud",
+            "Azure",
+        ],
     },
     {
         title: "Market",
         description:
             "Amplify your reach with strategies that drive real results and engage your audience.",
         imageUrl: Market,
-        tags: ["Digital Growth", "Organic Marketing", "Media Buying", "Performance Marketing"]
+        tags: [
+            "Digital Growth",
+            "Organic Marketing",
+            "Media Buying",
+            "Performance Marketing",
+        ],
     },
 ];
 
@@ -60,22 +72,25 @@ const SolutionPage = () => {
     const heroSectionRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start end", "end end"]
+        offset: ["start end", "end end"],
     });
-    
+
     const { scrollYProgress: heroScrollProgress } = useScroll({
         target: heroSectionRef,
-        offset: ["start center", "end start"]
+        offset: ["start center", "end start"],
     });
-    
+
     const translateY = useTransform(heroScrollProgress, [0, 1], [0, -300]);
-    const scale = useTransform(heroScrollProgress, [0, 1], [1, 0.50]);
+    const scale = useTransform(heroScrollProgress, [0, 1], [1, 0.5]);
 
     const totalCards = cardsData.length;
 
     return (
         <div>
-            <section ref={heroSectionRef} className="h-screen flex flex-col justify-center items-center font-instrument-sans">
+            <section
+                ref={heroSectionRef}
+                className="h-screen flex flex-col justify-center items-center font-instrument-sans px-4"
+            >
                 <motion.div
                     initial={{ scale: 0.55, x: 0 }}
                     animate={{ y: -100 }}
@@ -83,20 +98,31 @@ const SolutionPage = () => {
                     style={{ translateY, scale }}
                     className="flex flex-col items-center"
                 >
-                    <div className="text-[80px] md:text-[140px] text-center font-semibold">
-                        What Are We<br/> Fighting Against?
+                    <div className="text-[40px] sm:text-[60px] md:text-[100px] lg:text-[140px] text-center font-semibold leading-tight">
+                        What Are We
+                        <br /> Fighting Against?
                     </div>
-                    <div className="text-gray-500 text-[24px] md:text-[40px] text-center">
+                    <div className="text-gray-500 text-[18px] sm:text-[22px] md:text-[32px] lg:text-[40px] text-center mt-4">
                         Users not engaging with your design or project
                     </div>
-                    <div className="text-gray-500 text-[22px] md:text-[38px] text-center">
+                    <div className="text-gray-500 text-[16px] sm:text-[20px] md:text-[30px] lg:text-[38px] text-center mt-2">
                         Let's turn that challenge into opportunities.
                     </div>
                 </motion.div>
             </section>
 
-            <div ref={containerRef} className="relative h-[600vh]">
-                <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+            <div ref={containerRef} className="relative h-[600vh] font-instrument-sans">
+                <div className="container hidden">
+                        {cardsData.map((_,i) => (
+                            <div key={i} className="flex flex-col gap-2 m-4">
+                                <div className="text-4xl ">{_.title}</div>
+                                <div className="text-xl">{_.description}</div>
+                                <div className="">{_.tags}</div>
+                                <img className="rounded-4xl m-2 w-70 h-auto" src={_.imageUrl} />
+                            </div>
+                        ))}
+                </div>
+                <div className="flex sticky top-5 h-screen items-center overflow-hidden">
                     <div className="relative w-full max-w-7xl mx-auto">
                         {cardsData.map((card, index) => (
                             <SolutionCard
